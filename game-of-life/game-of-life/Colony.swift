@@ -32,6 +32,8 @@ class Colony:CustomStringConvertible{
     
     func resetColony() {
         cellsAlive = Set<Cell>()
+        genNum
+            = 0
     }
     
     fileprivate func isCellAliveNextGen(_ x:Int, y:Int)->Bool {
@@ -58,7 +60,7 @@ class Colony:CustomStringConvertible{
         for cell in cellsAlive{
             for xToCheck in (cell.xCoor-1...cell.xCoor+1)  {
                 for yToCheck in (cell.yCoor-1...cell.yCoor+1) {
-                    if isCellAliveNextGen(xToCheck, y: yToCheck) {
+                    if isCellAliveNextGen(xToCheck, y: yToCheck) && (xToCheck < 20) && (yToCheck < 20) {
                         nextGen.insert(Cell(x:xToCheck, y:yToCheck))
                     }
                 }
