@@ -1,0 +1,10 @@
+version: "Apple Swift version 3.0.1 (swiftlang-800.0.58.6 clang-800.0.42.1)"
+options: "a815b3add2208d71e9327d22fbcb646f"
+build_time: [533497576, 189016000]
+inputs:
+  "/Users/desheng/Desktop/game-of-life/game-of-life/game-of-life/game-of-life/DetailViewController.swift": [533497170, 0]
+  "/Users/desheng/Desktop/game-of-life/game-of-life/game-of-life/game-of-life/MasterViewController.swift": !dirty [533497510, 0]
+  "/Users/desheng/Desktop/game-of-life/game-of-life/game-of-life/game-of-life/Cell.swift": [533497170, 0]
+  "/Users/desheng/Desktop/game-of-life/game-of-life/game-of-life/game-of-life/ColonyList.swift": [9223372036854775807, 0]
+  "/Users/desheng/Desktop/game-of-life/game-of-life/game-of-life/game-of-life/AppDelegate.swift": [533497170, 0]
+  "/Users/desheng/Desktop/game-of-life/game-of-life/game-of-life/Colony.swift": [533497170, 0]
