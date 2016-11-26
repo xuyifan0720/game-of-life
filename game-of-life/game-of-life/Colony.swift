@@ -2,8 +2,15 @@
 //  Colony.swift
 //  game-of-life
 //
-//  Created by Hannah Cole on 11/14/16.
-//  Copyright © 2016 Yifan&Hannah_production. All rights reserved.
+//  Created by Hannah Cole on 11/26/16.
+//  Copyright © 2016 Yifan and Hannah Production. All rights reserved.
+//
+//
+//  Colony.swift
+//  GameOfLife
+//
+//  Created by Hannah Cole on 9/19/16.
+//  Copyright © 2016 Hannah Cole. All rights reserved.
 //
 
 
@@ -32,8 +39,6 @@ class Colony:CustomStringConvertible{
     
     func resetColony() {
         cellsAlive = Set<Cell>()
-        genNum
-            = 0
     }
     
     fileprivate func isCellAliveNextGen(_ x:Int, y:Int)->Bool {
@@ -60,7 +65,7 @@ class Colony:CustomStringConvertible{
         for cell in cellsAlive{
             for xToCheck in (cell.xCoor-1...cell.xCoor+1)  {
                 for yToCheck in (cell.yCoor-1...cell.yCoor+1) {
-                    if isCellAliveNextGen(xToCheck, y: yToCheck) && (xToCheck < 20) && (yToCheck < 20) {
+                    if isCellAliveNextGen(xToCheck, y: yToCheck) {
                         nextGen.insert(Cell(x:xToCheck, y:yToCheck))
                     }
                 }
@@ -90,4 +95,3 @@ class Colony:CustomStringConvertible{
         return description1
     }
 }
-

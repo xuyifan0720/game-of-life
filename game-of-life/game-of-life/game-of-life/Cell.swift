@@ -2,11 +2,9 @@
 //  Cell.swift
 //  game-of-life
 //
-//  Created by Hannah Cole on 11/14/16.
-//  Copyright © 2016 Yifan&Hannah_production. All rights reserved.
+//  Created by Hannah Cole on 11/26/16.
+//  Copyright © 2016 Yifan and Hannah Production. All rights reserved.
 //
-
-
 
 import Foundation
 
