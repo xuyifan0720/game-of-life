@@ -19,10 +19,14 @@ import Foundation
 class Colony: CustomStringConvertible, Equatable{
     var cellsAlive : Set<Cell>
     var genNum : Int
+    var colonyID : Int
+    static var nextID : Int = 0
     
     init (){
         cellsAlive = Set<Cell>()
         genNum = 0
+        colonyID = Colony.nextID
+        Colony.nextID += 1
     }
     
     func setCellAlive(_ x:Int, y:Int) {
@@ -42,6 +46,7 @@ class Colony: CustomStringConvertible, Equatable{
     }
     
     fileprivate func isCellAliveNextGen(_ x:Int, y:Int)->Bool {
+        if (x < 20 && y < 20) {
         var aliveNeighbors = 0
         for xNeighbor in (x-1...x+1) {
             for yNeighbor in (y-1...y+1) {
@@ -56,7 +61,9 @@ class Colony: CustomStringConvertible, Equatable{
         case 2: return isCellAlive(x, y: y)
         default: return false
         }
-        
+        } else {
+            return false
+        }
     }
     
     

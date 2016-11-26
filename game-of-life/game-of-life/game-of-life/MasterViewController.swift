@@ -70,6 +70,7 @@ class MasterViewController: UITableViewController{
         // Dispose of any resources that can be recreated.
     }
 
+
     @IBAction func addNewItem(sender: AnyObject)
     {
         let newItem = data.createColony(template: templatePicked.text!)
@@ -79,7 +80,6 @@ class MasterViewController: UITableViewController{
             tableView.insertRows(at:[indexPath],
                                  with: .automatic)
         }
-        
     }
 
 
