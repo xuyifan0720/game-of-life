@@ -153,19 +153,17 @@ SWIFT_CLASS("_TtC12game_of_life20DetailViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIPickerView;
 @class UIStoryboardSegue;
 @class UITableView;
 @class UITableViewCell;
 
 SWIFT_CLASS("_TtC12game_of_life20MasterViewController")
-@interface MasterViewController : UITableViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface MasterViewController : UITableViewController
 @property (nonatomic, strong) DetailViewController * _Nullable detailViewController;
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull templates;
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView * _Nonnull)in;
-- (NSInteger)pickerView:(UIPickerView * _Nonnull)pickerView numberOfRowsInComponent:(NSInteger)component;
-- (NSString * _Nullable)pickerView:(UIPickerView * _Nonnull)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component;
-@property (nonatomic, weak) IBOutlet UIPickerView * _Null_unspecified picker;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified templatePicked;
+- (IBAction)back:(id _Nonnull)sender;
+- (IBAction)forward:(id _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;

@@ -8,14 +8,14 @@ provides-member:
 provides-dynamic-lookup:
 - "configureView"
 - "viewDidLoad"
-- "detailDescriptionLabel"
 - "didReceiveMemoryWarning"
+- "detailDescriptionLabel"
 depends-top-level:
-- "AssignmentPrecedence"
 - "DetailViewController"
-- "Colony"
+- "AssignmentPrecedence"
 - "UIViewController"
 - "UILabel"
+- "Colony"
 depends-member:
 - ["Ps9AnyObject", "configureView"]
 - !private ["Ps9AnyObject", "description"]

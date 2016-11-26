@@ -8,9 +8,9 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "String"
+- !private "~="
 - "ColonyList"
 - "Colony"
-- !private "~="
 - !private "StringLiteralType"
 depends-member:
 - ["Ps9AnyObject", "Colony"]

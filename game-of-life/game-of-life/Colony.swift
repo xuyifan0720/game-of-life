@@ -60,7 +60,8 @@ class Colony: CustomStringConvertible, Equatable{
     }
     
     
-    func evolve(){
+    func evolve()
+    {
         var nextGen = Set<Cell>()
         for cell in cellsAlive{
             for xToCheck in (cell.xCoor-1...cell.xCoor+1)  {

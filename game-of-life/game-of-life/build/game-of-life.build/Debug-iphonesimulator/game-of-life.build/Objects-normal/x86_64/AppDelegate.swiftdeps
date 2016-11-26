@@ -6,32 +6,32 @@ provides-nominal:
 provides-member:
 - ["C12game_of_life11AppDelegate", ""]
 provides-dynamic-lookup:
+- "application"
+- "applicationDidBecomeActive"
 - "splitViewController"
+- "applicationWillEnterForeground"
 - "applicationDidEnterBackground"
 - "window"
-- "applicationWillEnterForeground"
 - "applicationWillResignActive"
-- "applicationDidBecomeActive"
-- "application"
 - "applicationWillTerminate"
 depends-top-level:
-- "UIApplicationLaunchOptionsKey"
+- !private "DetailViewController"
 - "UIWindow"
-- !private "-"
+- "AppDelegate"
 - "CastingPrecedence"
-- !private "UINavigationController"
 - "AssignmentPrecedence"
 - !private "=="
-- !private "DetailViewController"
-- "UISplitViewControllerDelegate"
+- "Bool"
+- !private "-"
+- !private "UINavigationController"
+- "UIResponder"
 - "UIApplication"
 - "UIApplicationDelegate"
-- "UIResponder"
 - !private "BooleanLiteralType"
-- "Bool"
-- "AppDelegate"
+- "UISplitViewControllerDelegate"
 - "UISplitViewController"
 - "UIViewController"
+- "UIApplicationLaunchOptionsKey"
 depends-member:
 - ["Ps9AnyObject", "application"]
 - ["Ps9AnyObject", "applicationDidBecomeActive"]

@@ -8,16 +8,16 @@ provides-member:
 - ["V12game_of_life4Cell", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "Bool"
-- "Hashable"
-- "=="
-- "AssignmentPrecedence"
-- "IntegerLiteralType"
-- !private "&&"
-- "FloatLiteralType"
-- "Cell"
-- !private "^"
 - "Int"
+- "=="
+- "Hashable"
+- "Bool"
+- "AssignmentPrecedence"
+- !private "&&"
+- !private "^"
+- "FloatLiteralType"
+- "IntegerLiteralType"
+- "Cell"
 depends-member:
 - !private ["Ps17BitwiseOperations", "hashValue"]
 - ["Sb", "deinit"]

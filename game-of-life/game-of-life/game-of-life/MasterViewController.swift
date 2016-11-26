@@ -8,28 +8,42 @@
 
 import UIKit
 
-class MasterViewController: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class MasterViewController: UITableViewController{
 
     var detailViewController: DetailViewController? = nil
     var data = ColonyList()
     let templates = ["basic", "glider gun", "smile", "troll"]
     
-    func numberOfComponents(in: UIPickerView) -> Int
-    {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
-    {
-        return templates.count;
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
-    {
-        return templates[row]
-    }
 
-    @IBOutlet weak var picker: UIPickerView!
+    @IBOutlet weak var templatePicked: UILabel!
+  
+    
+    @IBAction func back(_ sender: Any)
+    {
+        let index = templates.index(of: templatePicked.text!)
+        if index == 0
+        {
+            templatePicked.text = templates[templates.count - 1]
+        }
+        else
+        {
+            templatePicked.text = templates[index! - 1]
+        }
+    }
+    
+    @IBAction func forward(_ sender: Any)
+    {
+        let index = templates.index(of: templatePicked.text!)
+        if index == templates.count - 1
+        {
+            templatePicked.text = templates[0]
+        }
+        else
+        {
+            templatePicked.text = templates[index! + 1]
+        }
+
+    }
     
     override func viewDidLoad()
     {
@@ -40,10 +54,10 @@ class MasterViewController: UITableViewController, UIPickerViewDataSource, UIPic
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
-        picker.dataSource = self;
-        picker.delegate = self;
+        templatePicked.text = templates[0]
     }
 
+    
     override func viewWillAppear(_ animated: Bool)
     {
         self.clearsSelectionOnViewWillAppear = self.splitViewController!.isCollapsed
@@ -58,8 +72,7 @@ class MasterViewController: UITableViewController, UIPickerViewDataSource, UIPic
 
     @IBAction func addNewItem(sender: AnyObject)
     {
-        let index = picker.selectedRow(inComponent: 0)
-        let newItem = data.createColony(template: templates[index])
+        let newItem = data.createColony(template: templatePicked.text!)
         if let index = data.items.index(of: newItem)
         {
             let indexPath = IndexPath(row: index, section: 0)
