@@ -22,6 +22,12 @@ class ColonyList
         case "glider gun":
             col.setCellAlive(5, y: 4)
             break
+        case "smile":
+            col.setCellAlive(3, y: 5)
+            break
+        case "troll":
+            col.setCellAlive(2, y: 1)
+            break
         default:
             break
         }

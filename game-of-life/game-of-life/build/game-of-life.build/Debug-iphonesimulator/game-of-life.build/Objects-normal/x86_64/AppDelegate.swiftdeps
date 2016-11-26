@@ -6,32 +6,32 @@ provides-nominal:
 provides-member:
 - ["C12game_of_life11AppDelegate", ""]
 provides-dynamic-lookup:
-- "application"
-- "applicationWillResignActive"
-- "window"
 - "splitViewController"
 - "applicationDidEnterBackground"
+- "window"
 - "applicationWillEnterForeground"
+- "applicationWillResignActive"
 - "applicationDidBecomeActive"
+- "application"
 - "applicationWillTerminate"
 depends-top-level:
-- !private "BooleanLiteralType"
-- "UIResponder"
-- "UISplitViewControllerDelegate"
-- !private "-"
-- !private "UINavigationController"
-- !private "DetailViewController"
 - "UIApplicationLaunchOptionsKey"
-- "AppDelegate"
-- "UISplitViewController"
+- "UIWindow"
+- !private "-"
+- "CastingPrecedence"
+- !private "UINavigationController"
 - "AssignmentPrecedence"
 - !private "=="
-- "UIViewController"
-- "Bool"
-- "CastingPrecedence"
-- "UIApplicationDelegate"
-- "UIWindow"
+- !private "DetailViewController"
+- "UISplitViewControllerDelegate"
 - "UIApplication"
+- "UIApplicationDelegate"
+- "UIResponder"
+- !private "BooleanLiteralType"
+- "Bool"
+- "AppDelegate"
+- "UISplitViewController"
+- "UIViewController"
 depends-member:
 - ["Ps9AnyObject", "application"]
 - ["Ps9AnyObject", "applicationDidBecomeActive"]
@@ -178,6 +178,7 @@ depends-member:
 - !private ["Ps10Collection", "_Element"]
 - !private ["Ps10Collection", "count"]
 - !private ["Ps10Collection", "subscript"]
+- !private ["C12game_of_life6Colony", "deinit"]
 - !private ["Ps10Comparable", "IntegerLiteralType"]
 - !private ["Ps10Comparable", "Stride"]
 - !private ["Ps10Comparable", "_DisabledRangeIndex"]
@@ -812,6 +813,7 @@ depends-nominal:
 - "Ps7CVarArg"
 - !private "Vs11ClosedRange"
 - !private "Ps10Collection"
+- !private "C12game_of_life6Colony"
 - !private "Ps10Comparable"
 - !private "Vs20CountableClosedRange"
 - !private "Vs14CountableRange"

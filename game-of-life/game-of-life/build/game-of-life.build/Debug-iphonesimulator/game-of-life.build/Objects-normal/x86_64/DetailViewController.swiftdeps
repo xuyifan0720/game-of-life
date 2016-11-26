@@ -8,13 +8,12 @@ provides-member:
 provides-dynamic-lookup:
 - "configureView"
 - "viewDidLoad"
-- "didReceiveMemoryWarning"
 - "detailDescriptionLabel"
-- "detailItem"
+- "didReceiveMemoryWarning"
 depends-top-level:
-- "NSDate"
 - "AssignmentPrecedence"
 - "DetailViewController"
+- "Colony"
 - "UIViewController"
 - "UILabel"
 depends-member:
@@ -29,7 +28,6 @@ depends-member:
 - ["Ps9AnyObject", ""]
 - !private ["PSo15CALayerDelegate", "text"]
 - ["Ps7CVarArg", "configureView"]
-- !private ["Ps7CVarArg", "description"]
 - ["Ps7CVarArg", "detailDescriptionLabel"]
 - ["Ps7CVarArg", "detailItem"]
 - ["Ps7CVarArg", "didReceiveMemoryWarning"]
@@ -37,8 +35,9 @@ depends-member:
 - !private ["Ps7CVarArg", "text"]
 - ["Ps7CVarArg", "viewDidLoad"]
 - ["Ps7CVarArg", ""]
+- ["C12game_of_life6Colony", "deinit"]
+- !private ["C12game_of_life6Colony", "description"]
 - ["Ps28CustomDebugStringConvertible", "configureView"]
-- !private ["Ps28CustomDebugStringConvertible", "description"]
 - ["Ps28CustomDebugStringConvertible", "detailDescriptionLabel"]
 - ["Ps28CustomDebugStringConvertible", "detailItem"]
 - ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
@@ -46,7 +45,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "text"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - ["Ps28CustomDebugStringConvertible", ""]
-- !private ["Ps29CustomPlaygroundQuickLookable", "description"]
 - ["Ps23CustomStringConvertible", "configureView"]
 - !private ["Ps23CustomStringConvertible", "description"]
 - ["Ps23CustomStringConvertible", "detailDescriptionLabel"]
@@ -56,7 +54,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "text"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - ["Ps23CustomStringConvertible", ""]
-- ["C12game_of_life20DetailViewController", "NSDate"]
+- ["C12game_of_life20DetailViewController", "Colony"]
 - ["C12game_of_life20DetailViewController", "UILabel"]
 - ["C12game_of_life20DetailViewController", "configureView"]
 - ["C12game_of_life20DetailViewController", "deinit"]
@@ -75,7 +73,6 @@ depends-member:
 - ["Ps9Equatable", "viewDidLoad"]
 - ["Ps9Equatable", ""]
 - ["Ps8Hashable", "configureView"]
-- !private ["Ps8Hashable", "description"]
 - ["Ps8Hashable", "detailDescriptionLabel"]
 - ["Ps8Hashable", "detailItem"]
 - ["Ps8Hashable", "didReceiveMemoryWarning"]
@@ -86,7 +83,6 @@ depends-member:
 - ["SQ", "deinit"]
 - ["CSo7NSCoder", "deinit"]
 - ["PSo8NSCoding", "configureView"]
-- !private ["PSo8NSCoding", "description"]
 - ["PSo8NSCoding", "detailDescriptionLabel"]
 - ["PSo8NSCoding", "detailItem"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
@@ -94,9 +90,6 @@ depends-member:
 - !private ["PSo8NSCoding", "text"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", ""]
-- !private ["PSo9NSCopying", "description"]
-- ["CSo6NSDate", "deinit"]
-- !private ["CSo6NSDate", "description"]
 - ["PSo26NSExtensionRequestHandling", "configureView"]
 - ["PSo26NSExtensionRequestHandling", "detailDescriptionLabel"]
 - ["PSo26NSExtensionRequestHandling", "detailItem"]
@@ -104,10 +97,9 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "init"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", ""]
-- ["CSo8NSObject", "NSDate"]
+- ["CSo8NSObject", "Colony"]
 - ["CSo8NSObject", "UILabel"]
 - ["CSo8NSObject", "configureView"]
-- !private ["CSo8NSObject", "description"]
 - ["CSo8NSObject", "detailDescriptionLabel"]
 - ["CSo8NSObject", "detailItem"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
@@ -115,7 +107,6 @@ depends-member:
 - !private ["CSo8NSObject", "text"]
 - ["CSo8NSObject", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", "configureView"]
-- !private ["PSo16NSObjectProtocol", "description"]
 - ["PSo16NSObjectProtocol", "detailDescriptionLabel"]
 - ["PSo16NSObjectProtocol", "detailItem"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
@@ -123,7 +114,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "text"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", ""]
-- !private ["PSo14NSSecureCoding", "description"]
 - ["Sq", "deinit"]
 - ["SS", "deinit"]
 - !private ["PSo29UIAccessibilityIdentification", "text"]
@@ -157,7 +147,7 @@ depends-member:
 - !private ["PSo11UIFocusItem", "text"]
 - ["CSo7UILabel", "deinit"]
 - !private ["CSo7UILabel", "text"]
-- ["CSo11UIResponder", "NSDate"]
+- ["CSo11UIResponder", "Colony"]
 - ["CSo11UIResponder", "UILabel"]
 - ["CSo11UIResponder", "configureView"]
 - ["CSo11UIResponder", "detailDescriptionLabel"]
@@ -190,7 +180,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", ""]
 - !private ["CSo6UIView", "text"]
-- ["CSo16UIViewController", "NSDate"]
+- ["CSo16UIViewController", "Colony"]
 - ["CSo16UIViewController", "UILabel"]
 - ["CSo16UIViewController", "configureView"]
 - ["CSo16UIViewController", "deinit"]
@@ -201,9 +191,7 @@ depends-member:
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", ""]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "text"]
-- !private ["Ps35_HasCustomAnyHashableRepresentation", "description"]
 - ["Ps9_Hashable", "configureView"]
-- !private ["Ps9_Hashable", "description"]
 - ["Ps9_Hashable", "detailDescriptionLabel"]
 - ["Ps9_Hashable", "detailItem"]
 - ["Ps9_Hashable", "didReceiveMemoryWarning"]
@@ -215,8 +203,8 @@ depends-nominal:
 - "Ps9AnyObject"
 - !private "PSo15CALayerDelegate"
 - "Ps7CVarArg"
+- "C12game_of_life6Colony"
 - "Ps28CustomDebugStringConvertible"
-- !private "Ps29CustomPlaygroundQuickLookable"
 - "Ps23CustomStringConvertible"
 - "C12game_of_life20DetailViewController"
 - "Ps9Equatable"
@@ -224,12 +212,9 @@ depends-nominal:
 - "SQ"
 - "CSo7NSCoder"
 - "PSo8NSCoding"
-- !private "PSo9NSCopying"
-- "CSo6NSDate"
 - "PSo26NSExtensionRequestHandling"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
-- !private "PSo14NSSecureCoding"
 - "Sq"
 - "SS"
 - !private "PSo29UIAccessibilityIdentification"
@@ -249,7 +234,6 @@ depends-nominal:
 - !private "CSo6UIView"
 - "CSo16UIViewController"
 - !private "Ps37_DefaultCustomPlaygroundQuickLookable"
-- !private "Ps35_HasCustomAnyHashableRepresentation"
 - "Ps9_Hashable"
 depends-dynamic-lookup:
 depends-external:
@@ -263,4 +247,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-interface-hash: "f0b030491449ba707fdf2696c16308bc"
+interface-hash: "5654832112f4e0eea05515ec1631c20a"

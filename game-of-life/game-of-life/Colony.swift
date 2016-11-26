@@ -16,7 +16,7 @@
 
 import Foundation
 
-class Colony:CustomStringConvertible{
+class Colony: CustomStringConvertible, Equatable{
     var cellsAlive : Set<Cell>
     var genNum : Int
     
@@ -94,4 +94,9 @@ class Colony:CustomStringConvertible{
         }
         return description1
     }
+}
+
+func == (left: Colony, right: Colony) -> Bool
+{
+    return left.cellsAlive == right.cellsAlive
 }

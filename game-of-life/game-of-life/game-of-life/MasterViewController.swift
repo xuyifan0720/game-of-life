@@ -11,8 +11,8 @@ import UIKit
 class MasterViewController: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     var detailViewController: DetailViewController? = nil
-    var objects = [Colony]()
-    let templates = ["basic", "glider gun"]
+    var data = ColonyList()
+    let templates = ["basic", "glider gun", "smile", "troll"]
     
     func numberOfComponents(in: UIPickerView) -> Int
     {
@@ -31,13 +31,11 @@ class MasterViewController: UITableViewController, UIPickerViewDataSource, UIPic
 
     @IBOutlet weak var picker: UIPickerView!
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem
-
-        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
-        self.navigationItem.rightBarButtonItem = addButton
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
@@ -46,29 +44,41 @@ class MasterViewController: UITableViewController, UIPickerViewDataSource, UIPic
         picker.delegate = self;
     }
 
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool)
+    {
         self.clearsSelectionOnViewWillAppear = self.splitViewController!.isCollapsed
         super.viewWillAppear(animated)
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-    func insertNewObject(_ sender: Any)
+    @IBAction func addNewItem(sender: AnyObject)
     {
-        objects.insert(NSDate(), at: 0)
-        let indexPath = IndexPath(row: 0, section: 0)
-        self.tableView.insertRows(at: [indexPath], with: .automatic)
+        let index = picker.selectedRow(inComponent: 0)
+        let newItem = data.createColony(template: templates[index])
+        if let index = data.items.index(of: newItem)
+        {
+            let indexPath = IndexPath(row: index, section: 0)
+            tableView.insertRows(at:[indexPath],
+                                 with: .automatic)
+        }
+        
     }
+
 
     // MARK: - Segues
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetail" {
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                let object = objects[indexPath.row] as! NSDate
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "showDetail"
+        {
+            if let indexPath = self.tableView.indexPathForSelectedRow
+            {
+                let object = data.items[indexPath.row]
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
                 controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
@@ -79,32 +89,40 @@ class MasterViewController: UITableViewController, UIPickerViewDataSource, UIPic
 
     // MARK: - Table View
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int
+    {
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return objects.count
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return data.items.count
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-        let object = objects[indexPath.row] as! NSDate
+        let object = data.items[indexPath.row]
         cell.textLabel!.text = object.description
         return cell
     }
 
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    {
         // Return false if you do not want the specified item to be editable.
         return true
     }
 
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            objects.remove(at: indexPath.row)
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if editingStyle == .delete
+        {
+            data.items.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
+        }
+        else if editingStyle == .insert
+        {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }

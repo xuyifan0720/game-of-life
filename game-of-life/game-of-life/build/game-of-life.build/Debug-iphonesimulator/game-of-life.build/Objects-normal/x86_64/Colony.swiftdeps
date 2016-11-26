@@ -1,32 +1,35 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
 - "Colony"
+- "=="
 provides-nominal:
 - "C12game_of_life6Colony"
 provides-member:
 - ["C12game_of_life6Colony", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "AssignmentPrecedence"
-- !private "..."
-- !private "~="
-- !private "!="
-- "Bool"
-- !private "+"
-- !private "IntegerLiteralType"
-- "String"
-- !private "FloatLiteralType"
 - "Set"
-- !private "BooleanLiteralType"
-- !private "-"
-- !private "+="
-- "CustomStringConvertible"
-- "Cell"
-- "Int"
+- !private "~="
+- "=="
+- "AssignmentPrecedence"
+- !private "FloatLiteralType"
+- !private "!="
+- "String"
 - !private "UnicodeScalarType"
-- !private "StringLiteralType"
-- "Colony"
+- !private "IntegerLiteralType"
+- !private "-"
 - !private "&&"
+- !private "+="
+- !private "..."
+- "Cell"
+- "Bool"
+- "Equatable"
+- !private "+"
+- !private "BooleanLiteralType"
+- "CustomStringConvertible"
+- "Colony"
+- !private "StringLiteralType"
+- "Int"
 depends-member:
 - !private ["Ps9AnyObject", "Cell"]
 - !private ["Ps9AnyObject", "Set"]
@@ -133,18 +136,27 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "remove"]
 - ["Ps23CustomStringConvertible", ""]
 - !private ["Sd", "deinit"]
+- !private ["Ps9Equatable", "Cell"]
 - !private ["Ps9Equatable", "Element"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "Iterator"]
+- !private ["Ps9Equatable", "Set"]
 - !private ["Ps9Equatable", "Stride"]
 - !private ["Ps9Equatable", "_DisabledRangeIndex"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "cellsAlive"]
+- !private ["Ps9Equatable", "colonyRowString"]
 - !private ["Ps9Equatable", "contains"]
+- ["Ps9Equatable", "description"]
+- !private ["Ps9Equatable", "genNum"]
 - !private ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "insert"]
+- !private ["Ps9Equatable", "isCellAlive"]
+- !private ["Ps9Equatable", "isCellAliveNextGen"]
 - !private ["Ps9Equatable", "remove"]
 - !private ["Ps9Equatable", "xCoor"]
 - !private ["Ps9Equatable", "yCoor"]
+- ["Ps9Equatable", ""]
 - !private ["Ps25ExpressibleByArrayLiteral", "Element"]
 - !private ["Ps25ExpressibleByArrayLiteral", "Iterator"]
 - !private ["Ps25ExpressibleByArrayLiteral", "contains"]
@@ -325,7 +337,7 @@ depends-nominal:
 - !private "Ps17CustomReflectable"
 - "Ps23CustomStringConvertible"
 - !private "Sd"
-- !private "Ps9Equatable"
+- "Ps9Equatable"
 - !private "Ps25ExpressibleByArrayLiteral"
 - !private "Ps27ExpressibleByBooleanLiteral"
 - !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
@@ -403,4 +415,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-interface-hash: "81c8d1adb214fa3a4772dc439b177b7f"
+interface-hash: "3db39b53656e5076e112b245e1e2f60d"
