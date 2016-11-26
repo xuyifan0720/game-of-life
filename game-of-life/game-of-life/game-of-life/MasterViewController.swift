@@ -8,12 +8,29 @@
 
 import UIKit
 
-class MasterViewController: UITableViewController {
+class MasterViewController: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     var detailViewController: DetailViewController? = nil
     var objects = [Colony]()
+    let templates = ["basic", "glider gun"]
+    
+    func numberOfComponents(in: UIPickerView) -> Int
+    {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
+    {
+        return templates.count;
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
+    {
+        return templates[row]
+    }
 
-
+    @IBOutlet weak var picker: UIPickerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -25,6 +42,8 @@ class MasterViewController: UITableViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        picker.dataSource = self;
+        picker.delegate = self;
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -37,7 +56,8 @@ class MasterViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func insertNewObject(_ sender: Any) {
+    func insertNewObject(_ sender: Any)
+    {
         objects.insert(NSDate(), at: 0)
         let indexPath = IndexPath(row: 0, section: 0)
         self.tableView.insertRows(at: [indexPath], with: .automatic)
