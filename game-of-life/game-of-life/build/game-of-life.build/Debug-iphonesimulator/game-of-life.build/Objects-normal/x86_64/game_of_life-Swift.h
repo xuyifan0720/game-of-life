@@ -117,6 +117,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
 @import Foundation;
+@import CoreGraphics;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -145,7 +146,7 @@ SWIFT_CLASS("_TtC12game_of_life11AppDelegate")
 
 SWIFT_CLASS("_TtC12game_of_life20DetailViewController")
 @interface DetailViewController : UIViewController
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified detailDescriptionLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified descriptionLabel;
 - (void)configureView;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
@@ -156,12 +157,13 @@ SWIFT_CLASS("_TtC12game_of_life20DetailViewController")
 @class UIStoryboardSegue;
 @class UITableView;
 @class UITableViewCell;
+@class UITextField;
 
 SWIFT_CLASS("_TtC12game_of_life20MasterViewController")
 @interface MasterViewController : UITableViewController
 @property (nonatomic, strong) DetailViewController * _Nullable detailViewController;
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull templates;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified templatePicked;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified templatePicked;
 - (IBAction)back:(id _Nonnull)sender;
 - (IBAction)forward:(id _Nonnull)sender;
 - (void)viewDidLoad;
@@ -176,6 +178,22 @@ SWIFT_CLASS("_TtC12game_of_life20MasterViewController")
 - (void)tableView:(UITableView * _Nonnull)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC12game_of_life10colonyCell")
+@interface colonyCell : UITableViewCell
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC12game_of_life8drawView")
+@interface drawView : UIView
+@property (nonatomic, readonly) CGFloat gridNumber;
+- (void)drawRect:(CGRect)rect;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 

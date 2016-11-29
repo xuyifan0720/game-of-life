@@ -10,13 +10,16 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
 
-
-    func configureView() {
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    func configureView()
+    {
         // Update the user interface for the detail item.
-        if let detail = self.detailItem {
-            if let label = self.detailDescriptionLabel {
+        if let detail = self.detailItem
+        {
+            if let label = self.descriptionLabel
+            {
                 label.text = detail.description
             }
         }
@@ -24,7 +27,8 @@ class DetailViewController: UIViewController {
 
     
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
@@ -35,8 +39,10 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    var detailItem: Colony? {
-        didSet {
+    var detailItem: Colony?
+    {
+        didSet
+        {
             // Update the view.
             self.configureView()
         }

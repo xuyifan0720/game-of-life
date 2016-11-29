@@ -6,44 +6,44 @@ provides-nominal:
 provides-member:
 - ["C12game_of_life20MasterViewController", ""]
 provides-dynamic-lookup:
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "didReceiveMemoryWarning"
-- "forward"
+- "templatePicked"
 - "prepare"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "templates"
 - "back"
+- "viewDidLoad"
 - "detailViewController"
 - "addNewItem"
-- "viewWillAppear"
-- "viewDidLoad"
-- "templates"
+- "forward"
+- "didReceiveMemoryWarning"
 - "numberOfSections"
-- "templatePicked"
+- "viewWillAppear"
 depends-top-level:
-- "UITableViewCell"
-- "UITableViewController"
-- !private "BooleanLiteralType"
-- "Int"
-- "UILabel"
-- !private "+"
-- "StringLiteralType"
-- !private "-"
 - "ColonyList"
-- "Array"
+- "UITableViewCellEditingStyle"
+- "DetailViewController"
+- "AnyObject"
+- !private "BooleanLiteralType"
+- "MasterViewController"
+- !private "-"
+- "StringLiteralType"
+- "Int"
+- "UITableViewCell"
+- !private "+"
+- "UITableViewController"
+- !private "=="
+- "AssignmentPrecedence"
 - "UITableView"
-- !private "UINavigationController"
+- "CastingPrecedence"
+- "UIStoryboardSegue"
 - "Bool"
 - "IndexPath"
-- "MasterViewController"
-- !private "=="
-- "AnyObject"
-- "CastingPrecedence"
-- "AssignmentPrecedence"
-- "UITableViewCellEditingStyle"
-- "UIStoryboardSegue"
-- "DetailViewController"
+- "Array"
+- "UITextField"
+- !private "UINavigationController"
 depends-member:
 - ["Ps9AnyObject", "ColonyList"]
 - !private ["Ps9AnyObject", "IndexPath"]
@@ -54,7 +54,6 @@ depends-member:
 - ["Ps9AnyObject", "data"]
 - !private ["Ps9AnyObject", "deleteRows"]
 - !private ["Ps9AnyObject", "dequeueReusableCell"]
-- !private ["Ps9AnyObject", "description"]
 - !private ["Ps9AnyObject", "destination"]
 - !private ["Ps9AnyObject", "detailItem"]
 - ["Ps9AnyObject", "detailViewController"]
@@ -187,6 +186,7 @@ depends-member:
 - ["Ps7CVarArg", "viewDidLoad"]
 - ["Ps7CVarArg", "viewWillAppear"]
 - ["Ps7CVarArg", ""]
+- !private ["Vs9Character", "deinit"]
 - !private ["Vs11ClosedRange", "deinit"]
 - ["Ps10Collection", "Element"]
 - !private ["Ps10Collection", "Index"]
@@ -202,7 +202,6 @@ depends-member:
 - !private ["Ps10Collection", "row"]
 - !private ["Ps10Collection", "subscript"]
 - ["C12game_of_life6Colony", "deinit"]
-- !private ["C12game_of_life6Colony", "description"]
 - !private ["C12game_of_life10ColonyList", "createColony"]
 - ["C12game_of_life10ColonyList", "deinit"]
 - ["C12game_of_life10ColonyList", "init"]
@@ -301,7 +300,6 @@ depends-member:
 - ["Ps23CustomStringConvertible", "data"]
 - !private ["Ps23CustomStringConvertible", "deleteRows"]
 - !private ["Ps23CustomStringConvertible", "dequeueReusableCell"]
-- !private ["Ps23CustomStringConvertible", "description"]
 - !private ["Ps23CustomStringConvertible", "destination"]
 - !private ["Ps23CustomStringConvertible", "detailItem"]
 - ["Ps23CustomStringConvertible", "detailViewController"]
@@ -347,6 +345,7 @@ depends-member:
 - ["C12game_of_life20DetailViewController", "deinit"]
 - !private ["C12game_of_life20DetailViewController", "detailItem"]
 - !private ["C12game_of_life20DetailViewController", "navigationItem"]
+- !private ["Sd", "deinit"]
 - ["Ps9Equatable", "ColonyList"]
 - !private ["Ps9Equatable", "IndexPath"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
@@ -362,7 +361,6 @@ depends-member:
 - !private ["Ps9Equatable", "delete"]
 - !private ["Ps9Equatable", "deleteRows"]
 - !private ["Ps9Equatable", "dequeueReusableCell"]
-- !private ["Ps9Equatable", "description"]
 - !private ["Ps9Equatable", "destination"]
 - !private ["Ps9Equatable", "detailItem"]
 - ["Ps9Equatable", "detailViewController"]
@@ -414,6 +412,7 @@ depends-member:
 - ["Ps32ExpressibleByStringInterpolation", "init"]
 - ["Ps26ExpressibleByStringLiteral", "init"]
 - ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Sf", "deinit"]
 - ["Ps8Hashable", "ColonyList"]
 - !private ["Ps8Hashable", "IndexPath"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
@@ -495,6 +494,10 @@ depends-member:
 - !private ["Si", "Stride"]
 - !private ["Si", "_DisabledRangeIndex"]
 - ["Si", "deinit"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
 - !private ["Ps7Integer", "IntegerLiteralType"]
 - !private ["Ps7Integer", "Stride"]
 - !private ["Ps7Integer", "_DisabledRangeIndex"]
@@ -510,12 +513,12 @@ depends-member:
 - ["C12game_of_life20MasterViewController", "DetailViewController"]
 - ["C12game_of_life20MasterViewController", "IndexPath"]
 - ["C12game_of_life20MasterViewController", "Int"]
-- ["C12game_of_life20MasterViewController", "UILabel"]
 - !private ["C12game_of_life20MasterViewController", "UINavigationController"]
 - ["C12game_of_life20MasterViewController", "UIStoryboardSegue"]
 - ["C12game_of_life20MasterViewController", "UITableView"]
 - ["C12game_of_life20MasterViewController", "UITableViewCell"]
 - ["C12game_of_life20MasterViewController", "UITableViewCellEditingStyle"]
+- ["C12game_of_life20MasterViewController", "UITextField"]
 - ["C12game_of_life20MasterViewController", "addNewItem"]
 - ["C12game_of_life20MasterViewController", "back"]
 - !private ["C12game_of_life20MasterViewController", "clearsSelectionOnViewWillAppear"]
@@ -632,12 +635,12 @@ depends-member:
 - ["CSo8NSObject", "DetailViewController"]
 - ["CSo8NSObject", "IndexPath"]
 - ["CSo8NSObject", "Int"]
-- ["CSo8NSObject", "UILabel"]
 - !private ["CSo8NSObject", "UINavigationController"]
 - ["CSo8NSObject", "UIStoryboardSegue"]
 - ["CSo8NSObject", "UITableView"]
 - ["CSo8NSObject", "UITableViewCell"]
 - ["CSo8NSObject", "UITableViewCellEditingStyle"]
+- ["CSo8NSObject", "UITextField"]
 - ["CSo8NSObject", "addNewItem"]
 - ["CSo8NSObject", "back"]
 - !private ["CSo8NSObject", "clearsSelectionOnViewWillAppear"]
@@ -872,6 +875,7 @@ depends-member:
 - ["PSo18UIContentContainer", "viewWillAppear"]
 - ["PSo18UIContentContainer", ""]
 - !private ["PSo30UIContentSizeCategoryAdjusting", "text"]
+- !private ["CSo9UIControl", "text"]
 - !private ["PSo17UICoordinateSpace", "deleteRows"]
 - !private ["PSo17UICoordinateSpace", "dequeueReusableCell"]
 - !private ["PSo17UICoordinateSpace", "indexPathForSelectedRow"]
@@ -923,6 +927,7 @@ depends-member:
 - !private ["PSo11UIFocusItem", "text"]
 - !private ["PSo11UIFocusItem", "textLabel"]
 - !private ["PSo27UIGestureRecognizerDelegate", "textLabel"]
+- !private ["PSo10UIKeyInput", "text"]
 - ["CSo7UILabel", "deinit"]
 - !private ["CSo7UILabel", "text"]
 - ["CSo22UINavigationController", "deinit"]
@@ -936,12 +941,12 @@ depends-member:
 - ["CSo11UIResponder", "DetailViewController"]
 - ["CSo11UIResponder", "IndexPath"]
 - ["CSo11UIResponder", "Int"]
-- ["CSo11UIResponder", "UILabel"]
 - !private ["CSo11UIResponder", "UINavigationController"]
 - ["CSo11UIResponder", "UIStoryboardSegue"]
 - ["CSo11UIResponder", "UITableView"]
 - ["CSo11UIResponder", "UITableViewCell"]
 - ["CSo11UIResponder", "UITableViewCellEditingStyle"]
+- ["CSo11UIResponder", "UITextField"]
 - ["CSo11UIResponder", "addNewItem"]
 - ["CSo11UIResponder", "back"]
 - !private ["CSo11UIResponder", "clearsSelectionOnViewWillAppear"]
@@ -1078,12 +1083,12 @@ depends-member:
 - ["CSo21UITableViewController", "DetailViewController"]
 - ["CSo21UITableViewController", "IndexPath"]
 - ["CSo21UITableViewController", "Int"]
-- ["CSo21UITableViewController", "UILabel"]
 - !private ["CSo21UITableViewController", "UINavigationController"]
 - ["CSo21UITableViewController", "UIStoryboardSegue"]
 - ["CSo21UITableViewController", "UITableView"]
 - ["CSo21UITableViewController", "UITableViewCell"]
 - ["CSo21UITableViewController", "UITableViewCellEditingStyle"]
+- ["CSo21UITableViewController", "UITextField"]
 - ["CSo21UITableViewController", "addNewItem"]
 - ["CSo21UITableViewController", "back"]
 - !private ["CSo21UITableViewController", "clearsSelectionOnViewWillAppear"]
@@ -1150,6 +1155,9 @@ depends-member:
 - ["OSC23UITableViewRowAnimation", "deinit"]
 - !private ["OSC23UITableViewRowAnimation", "fade"]
 - ["OSC16UITableViewStyle", "deinit"]
+- !private ["CSo11UITextField", "text"]
+- !private ["PSo11UITextInput", "text"]
+- !private ["PSo17UITextInputTraits", "text"]
 - ["PSo18UITraitEnvironment", "ColonyList"]
 - !private ["PSo18UITraitEnvironment", "IndexPath"]
 - ["PSo18UITraitEnvironment", "addNewItem"]
@@ -1194,12 +1202,12 @@ depends-member:
 - ["CSo16UIViewController", "DetailViewController"]
 - ["CSo16UIViewController", "IndexPath"]
 - ["CSo16UIViewController", "Int"]
-- ["CSo16UIViewController", "UILabel"]
 - !private ["CSo16UIViewController", "UINavigationController"]
 - ["CSo16UIViewController", "UIStoryboardSegue"]
 - ["CSo16UIViewController", "UITableView"]
 - ["CSo16UIViewController", "UITableViewCell"]
 - ["CSo16UIViewController", "UITableViewCellEditingStyle"]
+- ["CSo16UIViewController", "UITextField"]
 - ["CSo16UIViewController", "addNewItem"]
 - ["CSo16UIViewController", "back"]
 - !private ["CSo16UIViewController", "clearsSelectionOnViewWillAppear"]
@@ -1224,6 +1232,12 @@ depends-member:
 - !private ["CSo16UIViewController", "viewControllers"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", "viewWillAppear"]
+- !private ["Su", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
 - ["Ps14_ArrayProtocol", "Element"]
 - !private ["Ps14_ArrayProtocol", "Index"]
 - !private ["Ps14_ArrayProtocol", "IndexDistance"]
@@ -1347,6 +1361,7 @@ depends-nominal:
 - "Sb"
 - !private "PSo15CALayerDelegate"
 - "Ps7CVarArg"
+- !private "Vs9Character"
 - !private "Vs11ClosedRange"
 - "Ps10Collection"
 - "C12game_of_life6Colony"
@@ -1361,6 +1376,7 @@ depends-nominal:
 - !private "Vs27DefaultBidirectionalIndices"
 - !private "Vs26DefaultRandomAccessIndices"
 - "C12game_of_life20DetailViewController"
+- !private "Sd"
 - "Ps9Equatable"
 - "Ps25ExpressibleByArrayLiteral"
 - !private "Ps27ExpressibleByBooleanLiteral"
@@ -1369,6 +1385,7 @@ depends-nominal:
 - "Ps32ExpressibleByStringInterpolation"
 - "Ps26ExpressibleByStringLiteral"
 - "Ps33ExpressibleByUnicodeScalarLiteral"
+- !private "Sf"
 - "Ps8Hashable"
 - "SQ"
 - "V10Foundation9IndexPath"
@@ -1376,6 +1393,10 @@ depends-nominal:
 - "Ps13IndexableBase"
 - !private "Vs16IndexingIterator"
 - "Si"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
 - !private "Ps7Integer"
 - !private "Ps17IntegerArithmetic"
 - !private "Ps16IteratorProtocol"
@@ -1416,11 +1437,13 @@ depends-nominal:
 - "CSo15UIBarButtonItem"
 - "PSo18UIContentContainer"
 - !private "PSo30UIContentSizeCategoryAdjusting"
+- !private "CSo9UIControl"
 - !private "PSo17UICoordinateSpace"
 - !private "PSo13UIDynamicItem"
 - "PSo18UIFocusEnvironment"
 - !private "PSo11UIFocusItem"
 - !private "PSo27UIGestureRecognizerDelegate"
+- !private "PSo10UIKeyInput"
 - "CSo7UILabel"
 - "CSo22UINavigationController"
 - "CSo16UINavigationItem"
@@ -1439,9 +1462,18 @@ depends-nominal:
 - "PSo19UITableViewDelegate"
 - "OSC23UITableViewRowAnimation"
 - "OSC16UITableViewStyle"
+- !private "CSo11UITextField"
+- !private "PSo11UITextInput"
+- !private "PSo17UITextInputTraits"
 - "PSo18UITraitEnvironment"
 - !private "CSo6UIView"
 - "CSo16UIViewController"
+- !private "Su"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
+- !private "Sc"
 - "Ps14_ArrayProtocol"
 - !private "Ps37_DefaultCustomPlaygroundQuickLookable"
 - "Ps24_DestructorSafeContainer"
@@ -1472,4 +1504,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-interface-hash: "39a30cbface311f1f29d51bb20603ed8"
+interface-hash: "2871a6f83e019f17ae0f7ef43add3e3c"

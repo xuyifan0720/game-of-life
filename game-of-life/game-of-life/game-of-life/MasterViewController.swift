@@ -14,9 +14,8 @@ class MasterViewController: UITableViewController{
     var data = ColonyList()
     let templates = ["basic", "glider gun", "smile", "troll"]
     
-
-    @IBOutlet weak var templatePicked: UILabel!
   
+    @IBOutlet weak var templatePicked: UITextField!
     
     @IBAction func back(_ sender: Any)
     {
@@ -117,7 +116,7 @@ class MasterViewController: UITableViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
         let object = data.items[indexPath.row]
-        cell.textLabel!.text = object.description
+        cell.textLabel!.text = "Colony \(indexPath.row)"
         return cell
     }
 

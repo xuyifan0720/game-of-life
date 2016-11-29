@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		93BE1FA31DEA01E700E371FD /* ColonyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE1FA21DEA01E700E371FD /* ColonyList.swift */; };
+		93BE1FA71DEA3ED200E371FD /* colonyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE1FA61DEA3ED200E371FD /* colonyCell.swift */; };
+		93BE1FA91DEA45E900E371FD /* drawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE1FA81DEA45E900E371FD /* drawView.swift */; };
+		93BE1FAD1DEC9A2800E371FD /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE1FAC1DEC9A2800E371FD /* Line.swift */; };
 		C0E673641DE9F5700098FE32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E673631DE9F5700098FE32 /* AppDelegate.swift */; };
 		C0E673661DE9F5700098FE32 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E673651DE9F5700098FE32 /* MasterViewController.swift */; };
 		C0E673681DE9F5700098FE32 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E673671DE9F5700098FE32 /* DetailViewController.swift */; };
@@ -20,6 +23,9 @@
 
 /* Begin PBXFileReference section */
 		93BE1FA21DEA01E700E371FD /* ColonyList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColonyList.swift; sourceTree = "<group>"; };
+		93BE1FA61DEA3ED200E371FD /* colonyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colonyCell.swift; sourceTree = "<group>"; };
+		93BE1FA81DEA45E900E371FD /* drawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = drawView.swift; sourceTree = "<group>"; };
+		93BE1FAC1DEC9A2800E371FD /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		C0E673601DE9F5700098FE32 /* game-of-life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "game-of-life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0E673631DE9F5700098FE32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0E673651DE9F5700098FE32 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -66,8 +72,11 @@
 				C0E673791DE9F5CC0098FE32 /* Cell.swift */,
 				C0E673631DE9F5700098FE32 /* AppDelegate.swift */,
 				C0E673651DE9F5700098FE32 /* MasterViewController.swift */,
+				93BE1FA81DEA45E900E371FD /* drawView.swift */,
 				C0E673671DE9F5700098FE32 /* DetailViewController.swift */,
 				C0E673691DE9F5700098FE32 /* Main.storyboard */,
+				93BE1FAC1DEC9A2800E371FD /* Line.swift */,
+				93BE1FA61DEA3ED200E371FD /* colonyCell.swift */,
 				93BE1FA21DEA01E700E371FD /* ColonyList.swift */,
 				C0E6736C1DE9F5700098FE32 /* Assets.xcassets */,
 				C0E6736E1DE9F5700098FE32 /* LaunchScreen.storyboard */,
@@ -149,9 +158,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0E673681DE9F5700098FE32 /* DetailViewController.swift in Sources */,
+				93BE1FA71DEA3ED200E371FD /* colonyCell.swift in Sources */,
+				93BE1FA91DEA45E900E371FD /* drawView.swift in Sources */,
 				C0E673661DE9F5700098FE32 /* MasterViewController.swift in Sources */,
 				C0E6737A1DE9F5CC0098FE32 /* Cell.swift in Sources */,
 				93BE1FA31DEA01E700E371FD /* ColonyList.swift in Sources */,
+				93BE1FAD1DEC9A2800E371FD /* Line.swift in Sources */,
 				C0E673641DE9F5700098FE32 /* AppDelegate.swift in Sources */,
 				C0E673781DE9F5B90098FE32 /* Colony.swift in Sources */,
 			);
@@ -279,6 +291,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Hannah.game-of-life";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -291,6 +304,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Hannah.game-of-life";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
