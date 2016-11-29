@@ -16,7 +16,7 @@
 
 import Foundation
 
-class Colony:CustomStringConvertible{
+class Colony: CustomStringConvertible, Equatable{
     var cellsAlive : Set<Cell>
     var genNum : Int
     var colonyID : Int
@@ -67,7 +67,8 @@ class Colony:CustomStringConvertible{
     }
     
     
-    func evolve(){
+    func evolve()
+    {
         var nextGen = Set<Cell>()
         for cell in cellsAlive{
             for xToCheck in (cell.xCoor-1...cell.xCoor+1)  {
@@ -101,4 +102,9 @@ class Colony:CustomStringConvertible{
         }
         return description1
     }
+}
+
+func == (left: Colony, right: Colony) -> Bool
+{
+    return left.cellsAlive == right.cellsAlive
 }

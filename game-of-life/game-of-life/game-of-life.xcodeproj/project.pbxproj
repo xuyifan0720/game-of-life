@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93BE1FA31DEA01E700E371FD /* ColonyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BE1FA21DEA01E700E371FD /* ColonyList.swift */; };
 		C0E673641DE9F5700098FE32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E673631DE9F5700098FE32 /* AppDelegate.swift */; };
 		C0E673661DE9F5700098FE32 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E673651DE9F5700098FE32 /* MasterViewController.swift */; };
 		C0E673681DE9F5700098FE32 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E673671DE9F5700098FE32 /* DetailViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		93BE1FA21DEA01E700E371FD /* ColonyList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColonyList.swift; sourceTree = "<group>"; };
 		C0E673601DE9F5700098FE32 /* game-of-life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "game-of-life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0E673631DE9F5700098FE32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0E673651DE9F5700098FE32 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				C0E673651DE9F5700098FE32 /* MasterViewController.swift */,
 				C0E673671DE9F5700098FE32 /* DetailViewController.swift */,
 				C0E673691DE9F5700098FE32 /* Main.storyboard */,
+				93BE1FA21DEA01E700E371FD /* ColonyList.swift */,
 				C0E6736C1DE9F5700098FE32 /* Assets.xcassets */,
 				C0E6736E1DE9F5700098FE32 /* LaunchScreen.storyboard */,
 				C0E673711DE9F5700098FE32 /* Info.plist */,
@@ -148,6 +151,7 @@
 				C0E673681DE9F5700098FE32 /* DetailViewController.swift in Sources */,
 				C0E673661DE9F5700098FE32 /* MasterViewController.swift in Sources */,
 				C0E6737A1DE9F5CC0098FE32 /* Cell.swift in Sources */,
+				93BE1FA31DEA01E700E371FD /* ColonyList.swift in Sources */,
 				C0E673641DE9F5700098FE32 /* AppDelegate.swift in Sources */,
 				C0E673781DE9F5B90098FE32 /* Colony.swift in Sources */,
 			);
@@ -309,6 +313,7 @@
 				C0E673761DE9F5700098FE32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

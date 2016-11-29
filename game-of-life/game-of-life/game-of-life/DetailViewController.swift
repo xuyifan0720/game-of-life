@@ -22,6 +22,8 @@ class DetailViewController: UIViewController {
         }
     }
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -33,7 +35,7 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    var detailItem: NSDate? {
+    var detailItem: Colony? {
         didSet {
             // Update the view.
             self.configureView()
