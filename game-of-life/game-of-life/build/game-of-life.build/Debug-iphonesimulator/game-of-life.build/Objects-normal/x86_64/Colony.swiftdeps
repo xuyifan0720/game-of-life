@@ -8,38 +8,42 @@ provides-member:
 - ["C12game_of_life6Colony", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "&&"
-- "Set"
+- !private "+"
+- "String"
+- "Int"
 - "=="
 - "AssignmentPrecedence"
-- "Int"
-- "Equatable"
-- !private "IntegerLiteralType"
-- !private "+="
-- !private "~="
-- !private "FloatLiteralType"
-- !private "..."
-- !private "UnicodeScalarType"
-- "String"
 - "Cell"
+- !private "+="
+- !private "&&"
+- "Equatable"
+- !private "..."
+- !private "~="
+- !private "UnicodeScalarType"
+- "IntegerLiteralType"
+- "Set"
+- "FloatLiteralType"
 - "Colony"
-- !private "-"
-- !private "!="
 - !private "BooleanLiteralType"
-- !private "+"
+- !private "!="
+- !private "<"
 - "CustomStringConvertible"
 - "Bool"
+- !private "-"
 - !private "StringLiteralType"
 depends-member:
 - !private ["Ps9AnyObject", "Cell"]
+- !private ["Ps9AnyObject", "Colony"]
 - !private ["Ps9AnyObject", "Set"]
 - !private ["Ps9AnyObject", "cellsAlive"]
+- !private ["Ps9AnyObject", "colonyID"]
 - !private ["Ps9AnyObject", "colonyRowString"]
 - ["Ps9AnyObject", "description"]
 - !private ["Ps9AnyObject", "genNum"]
 - !private ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "isCellAlive"]
 - !private ["Ps9AnyObject", "isCellAliveNextGen"]
+- !private ["Ps9AnyObject", "nextID"]
 - ["Ps9AnyObject", ""]
 - !private ["Ps23BidirectionalCollection", "Iterator"]
 - !private ["Ps22BidirectionalIndexable", "Iterator"]
@@ -73,10 +77,12 @@ depends-member:
 - !private ["Ps10Collection", "remove"]
 - ["C12game_of_life6Colony", "Bool"]
 - ["C12game_of_life6Colony", "Cell"]
+- !private ["C12game_of_life6Colony", "Colony"]
 - ["C12game_of_life6Colony", "Int"]
 - ["C12game_of_life6Colony", "Set"]
 - ["C12game_of_life6Colony", "String"]
 - ["C12game_of_life6Colony", "cellsAlive"]
+- ["C12game_of_life6Colony", "colonyID"]
 - !private ["C12game_of_life6Colony", "colonyRowString"]
 - ["C12game_of_life6Colony", "deinit"]
 - ["C12game_of_life6Colony", "description"]
@@ -85,6 +91,7 @@ depends-member:
 - ["C12game_of_life6Colony", "init"]
 - ["C12game_of_life6Colony", "isCellAlive"]
 - !private ["C12game_of_life6Colony", "isCellAliveNextGen"]
+- ["C12game_of_life6Colony", "nextID"]
 - ["C12game_of_life6Colony", "resetColony"]
 - ["C12game_of_life6Colony", "setCellAlive"]
 - ["C12game_of_life6Colony", "setCellDead"]
@@ -117,6 +124,7 @@ depends-member:
 - !private ["Ps17CustomReflectable", "insert"]
 - !private ["Ps17CustomReflectable", "remove"]
 - !private ["Ps23CustomStringConvertible", "Cell"]
+- !private ["Ps23CustomStringConvertible", "Colony"]
 - !private ["Ps23CustomStringConvertible", "Element"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["Ps23CustomStringConvertible", "Iterator"]
@@ -125,6 +133,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "_DisabledRangeIndex"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "cellsAlive"]
+- !private ["Ps23CustomStringConvertible", "colonyID"]
 - !private ["Ps23CustomStringConvertible", "colonyRowString"]
 - !private ["Ps23CustomStringConvertible", "contains"]
 - ["Ps23CustomStringConvertible", "description"]
@@ -133,10 +142,12 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "insert"]
 - !private ["Ps23CustomStringConvertible", "isCellAlive"]
 - !private ["Ps23CustomStringConvertible", "isCellAliveNextGen"]
+- !private ["Ps23CustomStringConvertible", "nextID"]
 - !private ["Ps23CustomStringConvertible", "remove"]
 - ["Ps23CustomStringConvertible", ""]
 - !private ["Sd", "deinit"]
 - !private ["Ps9Equatable", "Cell"]
+- !private ["Ps9Equatable", "Colony"]
 - !private ["Ps9Equatable", "Element"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "Iterator"]
@@ -145,6 +156,7 @@ depends-member:
 - !private ["Ps9Equatable", "_DisabledRangeIndex"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "cellsAlive"]
+- !private ["Ps9Equatable", "colonyID"]
 - !private ["Ps9Equatable", "colonyRowString"]
 - !private ["Ps9Equatable", "contains"]
 - ["Ps9Equatable", "description"]
@@ -153,6 +165,7 @@ depends-member:
 - !private ["Ps9Equatable", "insert"]
 - !private ["Ps9Equatable", "isCellAlive"]
 - !private ["Ps9Equatable", "isCellAliveNextGen"]
+- !private ["Ps9Equatable", "nextID"]
 - !private ["Ps9Equatable", "remove"]
 - !private ["Ps9Equatable", "xCoor"]
 - !private ["Ps9Equatable", "yCoor"]
@@ -415,4 +428,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-interface-hash: "3db39b53656e5076e112b245e1e2f60d"
+interface-hash: "0b9ffe0ac777a799b237748a807bcc3a"

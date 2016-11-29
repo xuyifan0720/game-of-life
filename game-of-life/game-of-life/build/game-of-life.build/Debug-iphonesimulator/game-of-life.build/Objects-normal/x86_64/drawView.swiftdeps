@@ -1,0 +1,401 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "drawView"
+provides-nominal:
+- "C12game_of_life8drawView"
+provides-member:
+- ["C12game_of_life8drawView", ""]
+provides-dynamic-lookup:
+- "draw"
+- "gridNumber"
+depends-top-level:
+- !private "*"
+- "CGRect"
+- !private "+"
+- !private "UIGraphicsGetCurrentContext"
+- "TernaryPrecedence"
+- !private ">"
+- "CGFloat"
+- "UIView"
+- "drawView"
+- !private "-"
+- "Colony"
+- !private "/"
+depends-member:
+- ["Ps16AbsoluteValuable", "init"]
+- ["Ps9AnyObject", "CGFloat"]
+- !private ["Ps9AnyObject", "CGRect"]
+- ["Ps9AnyObject", "Colony"]
+- !private ["Ps9AnyObject", "UIGraphicsGetCurrentContext"]
+- !private ["Ps9AnyObject", "cellsAlive"]
+- ["Ps9AnyObject", "col"]
+- ["Ps9AnyObject", "draw"]
+- !private ["Ps9AnyObject", "fill"]
+- ["Ps9AnyObject", "gridNumber"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "setFillColor"]
+- !private ["Ps9AnyObject", "setStrokeColor"]
+- !private ["Ps9AnyObject", "strokePath"]
+- ["Ps9AnyObject", ""]
+- ["Ps19BinaryFloatingPoint", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- ["Sb", "deinit"]
+- ["PSo15CALayerDelegate", "CGFloat"]
+- !private ["PSo15CALayerDelegate", "CGRect"]
+- ["PSo15CALayerDelegate", "Colony"]
+- !private ["PSo15CALayerDelegate", "UIGraphicsGetCurrentContext"]
+- ["PSo15CALayerDelegate", "col"]
+- ["PSo15CALayerDelegate", "draw"]
+- ["PSo15CALayerDelegate", "gridNumber"]
+- !private ["PSo15CALayerDelegate", "init"]
+- ["PSo15CALayerDelegate", ""]
+- ["CSo9CGContext", "deinit"]
+- !private ["CSo9CGContext", "fill"]
+- !private ["CSo9CGContext", "setFillColor"]
+- !private ["CSo9CGContext", "setStrokeColor"]
+- !private ["CSo9CGContext", "strokePath"]
+- ["V12CoreGraphics7CGFloat", "deinit"]
+- ["V12CoreGraphics7CGFloat", "init"]
+- ["VSC6CGRect", "deinit"]
+- !private ["VSC6CGRect", "height"]
+- !private ["VSC6CGRect", "init"]
+- !private ["VSC6CGRect", "width"]
+- ["Ps7CVarArg", "CGFloat"]
+- !private ["Ps7CVarArg", "CGRect"]
+- ["Ps7CVarArg", "Colony"]
+- !private ["Ps7CVarArg", "Iterator"]
+- !private ["Ps7CVarArg", "UIGraphicsGetCurrentContext"]
+- ["Ps7CVarArg", "col"]
+- ["Ps7CVarArg", "draw"]
+- ["Ps7CVarArg", "gridNumber"]
+- ["Ps7CVarArg", "init"]
+- ["Ps7CVarArg", ""]
+- ["V12game_of_life4Cell", "deinit"]
+- !private ["V12game_of_life4Cell", "xCoor"]
+- !private ["V12game_of_life4Cell", "yCoor"]
+- !private ["Ps10Collection", "Iterator"]
+- !private ["C12game_of_life6Colony", "cellsAlive"]
+- ["C12game_of_life6Colony", "deinit"]
+- ["C12game_of_life6Colony", "init"]
+- ["Ps10Comparable", "init"]
+- ["Ps28CustomDebugStringConvertible", "CGFloat"]
+- !private ["Ps28CustomDebugStringConvertible", "CGRect"]
+- ["Ps28CustomDebugStringConvertible", "Colony"]
+- !private ["Ps28CustomDebugStringConvertible", "Iterator"]
+- !private ["Ps28CustomDebugStringConvertible", "UIGraphicsGetCurrentContext"]
+- ["Ps28CustomDebugStringConvertible", "col"]
+- ["Ps28CustomDebugStringConvertible", "draw"]
+- ["Ps28CustomDebugStringConvertible", "gridNumber"]
+- !private ["Ps28CustomDebugStringConvertible", "height"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "width"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "height"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "width"]
+- !private ["Ps17CustomReflectable", "Element"]
+- !private ["Ps17CustomReflectable", "Iterator"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "height"]
+- ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "width"]
+- ["Ps23CustomStringConvertible", "CGFloat"]
+- !private ["Ps23CustomStringConvertible", "CGRect"]
+- ["Ps23CustomStringConvertible", "Colony"]
+- !private ["Ps23CustomStringConvertible", "Iterator"]
+- !private ["Ps23CustomStringConvertible", "UIGraphicsGetCurrentContext"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "cellsAlive"]
+- ["Ps23CustomStringConvertible", "col"]
+- ["Ps23CustomStringConvertible", "draw"]
+- ["Ps23CustomStringConvertible", "gridNumber"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Sd", "deinit"]
+- ["Ps9Equatable", "CGFloat"]
+- !private ["Ps9Equatable", "CGRect"]
+- ["Ps9Equatable", "Colony"]
+- !private ["Ps9Equatable", "Iterator"]
+- !private ["Ps9Equatable", "UIGraphicsGetCurrentContext"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "cellsAlive"]
+- ["Ps9Equatable", "col"]
+- ["Ps9Equatable", "draw"]
+- ["Ps9Equatable", "gridNumber"]
+- !private ["Ps9Equatable", "height"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "width"]
+- !private ["Ps9Equatable", "xCoor"]
+- !private ["Ps9Equatable", "yCoor"]
+- ["Ps9Equatable", ""]
+- !private ["Ps25ExpressibleByArrayLiteral", "Iterator"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- ["Ps25ExpressibleByFloatLiteral", "init"]
+- ["Ps27ExpressibleByIntegerLiteral", "init"]
+- ["Ps13FloatingPoint", "init"]
+- ["Ps8Hashable", "CGFloat"]
+- !private ["Ps8Hashable", "CGRect"]
+- ["Ps8Hashable", "Colony"]
+- !private ["Ps8Hashable", "Iterator"]
+- !private ["Ps8Hashable", "UIGraphicsGetCurrentContext"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- ["Ps8Hashable", "col"]
+- ["Ps8Hashable", "draw"]
+- ["Ps8Hashable", "gridNumber"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "xCoor"]
+- !private ["Ps8Hashable", "yCoor"]
+- ["Ps8Hashable", ""]
+- !private ["Ps9Indexable", "Iterator"]
+- !private ["Ps13IndexableBase", "Iterator"]
+- ["Si", "deinit"]
+- !private ["Ps16IteratorProtocol", "Element"]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- ["CSo7NSCoder", "deinit"]
+- ["PSo8NSCoding", "CGFloat"]
+- !private ["PSo8NSCoding", "CGRect"]
+- ["PSo8NSCoding", "Colony"]
+- !private ["PSo8NSCoding", "UIGraphicsGetCurrentContext"]
+- ["PSo8NSCoding", "col"]
+- ["PSo8NSCoding", "draw"]
+- ["PSo8NSCoding", "gridNumber"]
+- !private ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", ""]
+- ["CSo8NSObject", "CGFloat"]
+- ["CSo8NSObject", "CGRect"]
+- ["CSo8NSObject", "Colony"]
+- !private ["CSo8NSObject", "UIGraphicsGetCurrentContext"]
+- ["CSo8NSObject", "col"]
+- ["CSo8NSObject", "draw"]
+- ["CSo8NSObject", "gridNumber"]
+- ["CSo8NSObject", "init"]
+- ["PSo16NSObjectProtocol", "CGFloat"]
+- !private ["PSo16NSObjectProtocol", "CGRect"]
+- ["PSo16NSObjectProtocol", "Colony"]
+- !private ["PSo16NSObjectProtocol", "UIGraphicsGetCurrentContext"]
+- ["PSo16NSObjectProtocol", "col"]
+- ["PSo16NSObjectProtocol", "draw"]
+- ["PSo16NSObjectProtocol", "gridNumber"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", ""]
+- ["Sq", "deinit"]
+- !private ["Ps8Sequence", "Iterator"]
+- !private ["Vs3Set", "Iterator"]
+- !private ["Ps10SetAlgebra", "Iterator"]
+- !private ["Vs11SetIterator", "Element"]
+- ["Ps12SignedNumber", "init"]
+- ["Ps10Strideable", "init"]
+- ["PSo29UIAccessibilityIdentification", "CGFloat"]
+- !private ["PSo29UIAccessibilityIdentification", "CGRect"]
+- ["PSo29UIAccessibilityIdentification", "Colony"]
+- !private ["PSo29UIAccessibilityIdentification", "UIGraphicsGetCurrentContext"]
+- ["PSo29UIAccessibilityIdentification", "col"]
+- ["PSo29UIAccessibilityIdentification", "draw"]
+- ["PSo29UIAccessibilityIdentification", "gridNumber"]
+- !private ["PSo29UIAccessibilityIdentification", "init"]
+- ["PSo29UIAccessibilityIdentification", ""]
+- ["PSo12UIAppearance", "CGFloat"]
+- !private ["PSo12UIAppearance", "CGRect"]
+- ["PSo12UIAppearance", "Colony"]
+- !private ["PSo12UIAppearance", "UIGraphicsGetCurrentContext"]
+- ["PSo12UIAppearance", "col"]
+- ["PSo12UIAppearance", "draw"]
+- ["PSo12UIAppearance", "gridNumber"]
+- !private ["PSo12UIAppearance", "init"]
+- ["PSo12UIAppearance", ""]
+- ["PSo21UIAppearanceContainer", "CGFloat"]
+- !private ["PSo21UIAppearanceContainer", "CGRect"]
+- ["PSo21UIAppearanceContainer", "Colony"]
+- !private ["PSo21UIAppearanceContainer", "UIGraphicsGetCurrentContext"]
+- ["PSo21UIAppearanceContainer", "col"]
+- ["PSo21UIAppearanceContainer", "draw"]
+- ["PSo21UIAppearanceContainer", "gridNumber"]
+- !private ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", ""]
+- ["PSo17UICoordinateSpace", "CGFloat"]
+- !private ["PSo17UICoordinateSpace", "CGRect"]
+- ["PSo17UICoordinateSpace", "Colony"]
+- !private ["PSo17UICoordinateSpace", "UIGraphicsGetCurrentContext"]
+- ["PSo17UICoordinateSpace", "col"]
+- ["PSo17UICoordinateSpace", "draw"]
+- ["PSo17UICoordinateSpace", "gridNumber"]
+- !private ["PSo17UICoordinateSpace", "init"]
+- ["PSo17UICoordinateSpace", ""]
+- ["PSo13UIDynamicItem", "CGFloat"]
+- !private ["PSo13UIDynamicItem", "CGRect"]
+- ["PSo13UIDynamicItem", "Colony"]
+- !private ["PSo13UIDynamicItem", "UIGraphicsGetCurrentContext"]
+- ["PSo13UIDynamicItem", "col"]
+- ["PSo13UIDynamicItem", "draw"]
+- ["PSo13UIDynamicItem", "gridNumber"]
+- !private ["PSo13UIDynamicItem", "init"]
+- ["PSo13UIDynamicItem", ""]
+- ["PSo18UIFocusEnvironment", "CGFloat"]
+- !private ["PSo18UIFocusEnvironment", "CGRect"]
+- ["PSo18UIFocusEnvironment", "Colony"]
+- !private ["PSo18UIFocusEnvironment", "UIGraphicsGetCurrentContext"]
+- ["PSo18UIFocusEnvironment", "col"]
+- ["PSo18UIFocusEnvironment", "draw"]
+- ["PSo18UIFocusEnvironment", "gridNumber"]
+- !private ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", ""]
+- ["PSo11UIFocusItem", "CGFloat"]
+- !private ["PSo11UIFocusItem", "CGRect"]
+- ["PSo11UIFocusItem", "Colony"]
+- !private ["PSo11UIFocusItem", "UIGraphicsGetCurrentContext"]
+- ["PSo11UIFocusItem", "col"]
+- ["PSo11UIFocusItem", "draw"]
+- ["PSo11UIFocusItem", "gridNumber"]
+- !private ["PSo11UIFocusItem", "init"]
+- ["PSo11UIFocusItem", ""]
+- ["CSo11UIResponder", "CGFloat"]
+- ["CSo11UIResponder", "CGRect"]
+- ["CSo11UIResponder", "Colony"]
+- !private ["CSo11UIResponder", "UIGraphicsGetCurrentContext"]
+- ["CSo11UIResponder", "col"]
+- ["CSo11UIResponder", "draw"]
+- ["CSo11UIResponder", "gridNumber"]
+- ["CSo11UIResponder", "init"]
+- ["PSo30UIResponderStandardEditActions", "CGFloat"]
+- !private ["PSo30UIResponderStandardEditActions", "CGRect"]
+- ["PSo30UIResponderStandardEditActions", "Colony"]
+- !private ["PSo30UIResponderStandardEditActions", "UIGraphicsGetCurrentContext"]
+- ["PSo30UIResponderStandardEditActions", "col"]
+- ["PSo30UIResponderStandardEditActions", "draw"]
+- ["PSo30UIResponderStandardEditActions", "gridNumber"]
+- !private ["PSo30UIResponderStandardEditActions", "init"]
+- ["PSo30UIResponderStandardEditActions", ""]
+- ["PSo18UITraitEnvironment", "CGFloat"]
+- !private ["PSo18UITraitEnvironment", "CGRect"]
+- ["PSo18UITraitEnvironment", "Colony"]
+- !private ["PSo18UITraitEnvironment", "UIGraphicsGetCurrentContext"]
+- ["PSo18UITraitEnvironment", "col"]
+- ["PSo18UITraitEnvironment", "draw"]
+- ["PSo18UITraitEnvironment", "gridNumber"]
+- !private ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", ""]
+- ["CSo6UIView", "CGFloat"]
+- ["CSo6UIView", "CGRect"]
+- ["CSo6UIView", "Colony"]
+- !private ["CSo6UIView", "UIGraphicsGetCurrentContext"]
+- ["CSo6UIView", "col"]
+- ["CSo6UIView", "deinit"]
+- ["CSo6UIView", "draw"]
+- ["CSo6UIView", "gridNumber"]
+- ["CSo6UIView", "init"]
+- ["CSo6UIView", ""]
+- ["Ps15_CVarArgAligned", "init"]
+- ["Ps22_CVarArgPassedAsDouble", "init"]
+- ["Ps37_DefaultCustomPlaygroundQuickLookable", "CGFloat"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "CGRect"]
+- ["Ps37_DefaultCustomPlaygroundQuickLookable", "Colony"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "UIGraphicsGetCurrentContext"]
+- ["Ps37_DefaultCustomPlaygroundQuickLookable", "col"]
+- ["Ps37_DefaultCustomPlaygroundQuickLookable", "draw"]
+- ["Ps37_DefaultCustomPlaygroundQuickLookable", "gridNumber"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "init"]
+- ["Ps37_DefaultCustomPlaygroundQuickLookable", ""]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- ["Ps9_Hashable", "CGFloat"]
+- !private ["Ps9_Hashable", "CGRect"]
+- ["Ps9_Hashable", "Colony"]
+- !private ["Ps9_Hashable", "Iterator"]
+- !private ["Ps9_Hashable", "UIGraphicsGetCurrentContext"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- ["Ps9_Hashable", "col"]
+- ["Ps9_Hashable", "draw"]
+- ["Ps9_Hashable", "gridNumber"]
+- ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "xCoor"]
+- !private ["Ps9_Hashable", "yCoor"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps21_ObjectiveCBridgeable", "Iterator"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "height"]
+- ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "width"]
+- ["Ps11_Strideable", "init"]
+- ["C12game_of_life8drawView", "CGFloat"]
+- ["C12game_of_life8drawView", "CGRect"]
+- ["C12game_of_life8drawView", "Colony"]
+- !private ["C12game_of_life8drawView", "UIGraphicsGetCurrentContext"]
+- ["C12game_of_life8drawView", "col"]
+- ["C12game_of_life8drawView", "deinit"]
+- ["C12game_of_life8drawView", "draw"]
+- ["C12game_of_life8drawView", "gridNumber"]
+- ["C12game_of_life8drawView", "init"]
+depends-nominal:
+- "Ps16AbsoluteValuable"
+- "Ps9AnyObject"
+- "Ps19BinaryFloatingPoint"
+- "Sb"
+- "PSo15CALayerDelegate"
+- "CSo9CGContext"
+- "V12CoreGraphics7CGFloat"
+- "VSC6CGRect"
+- "Ps7CVarArg"
+- "V12game_of_life4Cell"
+- !private "Ps10Collection"
+- "C12game_of_life6Colony"
+- "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Sd"
+- "Ps9Equatable"
+- !private "Ps25ExpressibleByArrayLiteral"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- "Ps25ExpressibleByFloatLiteral"
+- "Ps27ExpressibleByIntegerLiteral"
+- "Ps13FloatingPoint"
+- "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Ps13IndexableBase"
+- "Si"
+- !private "Ps16IteratorProtocol"
+- !private "Ps25LosslessStringConvertible"
+- "CSo7NSCoder"
+- "PSo8NSCoding"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "Sq"
+- !private "Ps8Sequence"
+- !private "Vs3Set"
+- !private "Ps10SetAlgebra"
+- !private "Vs11SetIterator"
+- "Ps12SignedNumber"
+- "Ps10Strideable"
+- "PSo29UIAccessibilityIdentification"
+- "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo17UICoordinateSpace"
+- "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- "PSo11UIFocusItem"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- "PSo18UITraitEnvironment"
+- "CSo6UIView"
+- "Ps15_CVarArgAligned"
+- "Ps22_CVarArgPassedAsDouble"
+- "Ps37_DefaultCustomPlaygroundQuickLookable"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- "Ps9_Hashable"
+- "Ps21_ObjectiveCBridgeable"
+- "Ps11_Strideable"
+- "C12game_of_life8drawView"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+interface-hash: "bc380f1a34be57a3fc34abd0e1fd0299"

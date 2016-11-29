@@ -7,10 +7,10 @@ provides-member:
 - ["C12game_of_life10ColonyList", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "String"
-- !private "~="
-- "ColonyList"
 - "Colony"
+- !private "~="
+- "String"
+- "ColonyList"
 - !private "StringLiteralType"
 depends-member:
 - ["Ps9AnyObject", "Colony"]
