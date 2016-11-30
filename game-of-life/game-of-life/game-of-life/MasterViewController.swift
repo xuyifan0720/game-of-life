@@ -115,16 +115,10 @@ class MasterViewController: UITableViewController{
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-<<<<<<< HEAD
-        let object = objects[indexPath.row]
-=======
         let object = data.items[indexPath.row]
-<<<<<<< HEAD
->>>>>>> b0cc8ae234de9b06b24561e1ddc4c464937ef421
-        cell.textLabel!.text = object.description
-=======
+
         cell.textLabel!.text = "Colony \(indexPath.row)"
->>>>>>> 8d3ac4adcef58c85e07fbc0d7f682ecb34556782
+
         return cell
     }
 
