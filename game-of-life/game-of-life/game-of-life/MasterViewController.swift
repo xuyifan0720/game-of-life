@@ -116,7 +116,9 @@ class MasterViewController: UITableViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
         let object = data.items[indexPath.row]
+
         cell.textLabel!.text = "Colony \(indexPath.row)"
+
         return cell
     }
 
