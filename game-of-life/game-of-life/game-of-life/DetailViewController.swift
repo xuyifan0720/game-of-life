@@ -17,14 +17,8 @@ class DetailViewController: UIViewController {
     func configureView()
     {
         // Update the user interface for the detail item.
-        for _ in 0 ... 100
-        {
-            print("lol")
-        }
         if let detail = self.detailItem
         {
-            print(detail.cellsAlive)
-            print(drawer == nil)
             drawer.col = detail
             drawer.setNeedsDisplay()
             if let label = self.descriptionLabel
