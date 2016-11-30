@@ -23,6 +23,8 @@ class DetailViewController: UIViewController {
         }
         if let detail = self.detailItem
         {
+            print("Colony \(detail.colonyID)")
+            self.navigationItem.title =  "Colony \(detail.colonyID)"
             print(detail.cellsAlive)
             print(drawer == nil)
             drawer.col = detail

@@ -26,7 +26,7 @@ class Colony: CustomStringConvertible, Equatable{
         cellsAlive = Set<Cell>()
         genNum = 0
         colonyID = Colony.nextID
-        Colony.nextID += 1
+        Colony.nextID = Colony.nextID + 1
     }
     
     func setCellAlive(_ x:Int, y:Int) {
