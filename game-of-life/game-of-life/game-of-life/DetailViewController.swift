@@ -11,13 +11,22 @@ import UIKit
 class DetailViewController: UIViewController {
 
 
+    @IBOutlet weak var drawer: drawView!
     @IBOutlet weak var descriptionLabel: UILabel!
     
     func configureView()
     {
         // Update the user interface for the detail item.
+        for _ in 0 ... 100
+        {
+            print("lol")
+        }
         if let detail = self.detailItem
         {
+            print(detail.cellsAlive)
+            print(drawer == nil)
+            drawer.col = detail
+            drawer.setNeedsDisplay()
             if let label = self.descriptionLabel
             {
                 label.text = detail.description
@@ -44,7 +53,8 @@ class DetailViewController: UIViewController {
         didSet
         {
             // Update the view.
-            self.configureView()
+            
+            //self.configureView()
         }
     }
 

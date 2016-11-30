@@ -15,6 +15,8 @@ class drawView: UIView
     var col = Colony()
     let gridNumber = CGFloat(60)
     
+    
+    
     override func draw(_ rect: CGRect)
     {
         let restriction = rect.width > rect.height ? rect.height : rect.width

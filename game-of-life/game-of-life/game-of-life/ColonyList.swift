@@ -14,13 +14,16 @@ class ColonyList
     
     func createColony(template: String) -> Colony
     {
-        var col = Colony()
+        let col = Colony()
         switch template
         {
         case "basic":
             break
         case "glider gun":
-            col.setCellAlive(5, y: 4)
+            for _ in 0 ..< 1000
+            {
+                col.setCellAlive(Int(arc4random_uniform(60)) , y: Int(arc4random_uniform(60)))
+            }
             break
         case "smile":
             col.setCellAlive(3, y: 5)
