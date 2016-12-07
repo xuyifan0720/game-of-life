@@ -12,10 +12,33 @@ import UIKit
 class drawView: UIView
 {
     
+<<<<<<< HEAD
     var col: Colony?
+=======
+    var col = Colony(){
+        didSet{
+            setNeedsDisplay()
+        }
+    }
+>>>>>>> d06c1d11b2966ba6a4b4ead8bbebbb6aef79947b
     let gridNumber = CGFloat(60)
     
+    // 0 is setting cells dead, 1 is setting cells alive
+    var setMode = 0
     
+<<<<<<< HEAD
+=======
+    // converts the coordinates of view to that of the cell
+    func convertCordinate(rect: CGRect, x: CGFloat, y: CGFloat)->(Int, Int)
+    {
+        let restriction = rect.width > rect.height ? rect.height : rect.width
+        let upperbound = (rect.height - restriction)/2
+        let sidebound = (rect.width - restriction)/2
+        let cellSize = restriction/gridNumber
+        return (Int((x - sidebound)/cellSize), Int((y - upperbound)/cellSize))
+    }
+    
+>>>>>>> d06c1d11b2966ba6a4b4ead8bbebbb6aef79947b
     override func draw(_ rect: CGRect)
     {
         let restriction = rect.width > rect.height ? rect.height : rect.width
@@ -38,4 +61,35 @@ class drawView: UIView
         }
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        let location = touches.first!.location(in: self)
+        let (x, y) = convertCordinate(rect: frame, x: location.x, y: location.y)
+        if col.cellsAlive.contains(Cell(x: x, y: y))
+        {
+            setMode = 0
+            col.setCellDead(x, y: y)
+        }
+        else
+        {
+            setMode = 1
+            col.setCellAlive(x, y: y)
+        }
+        setNeedsDisplay()
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        let location = touches.first!.location(in: self)
+        let (x, y) = convertCordinate(rect: frame, x: location.x, y: location.y)
+        if setMode == 0
+        {
+            col.setCellDead(x, y: y)
+        }
+        else
+        {
+            col.setCellAlive(x, y: y)
+        }
+        setNeedsDisplay()
+    }
 }
