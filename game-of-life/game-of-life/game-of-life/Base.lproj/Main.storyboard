@@ -51,6 +51,21 @@
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T1A-mR-sNA">
                                 <rect key="frame" x="0.0" y="718" width="703" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBG-zq-yhC">
+                                        <rect key="frame" x="0.0" y="0.0" width="580" height="50"/>
+                                        <state key="normal" title="Evolve 1 Gen"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrapping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohn-QT-cvv">
+                                        <rect key="frame" x="580" y="0.0" width="74" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FfP-DI-KWD">
+                                        <rect key="frame" x="654" y="0.0" width="51" height="50"/>
+                                    </switch>
+                                </subviews>
                             </stackView>
                         </subviews>
                         <constraints>
