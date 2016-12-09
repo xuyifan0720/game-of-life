@@ -12,22 +12,17 @@ import UIKit
 class drawView: UIView
 {
     
-<<<<<<< HEAD
-    var col: Colony?
-=======
-    var col = Colony(){
+    var col = Colony(index: -1){
         didSet{
             setNeedsDisplay()
         }
     }
->>>>>>> d06c1d11b2966ba6a4b4ead8bbebbb6aef79947b
     let gridNumber = CGFloat(60)
     
     // 0 is setting cells dead, 1 is setting cells alive
     var setMode = 0
     
-<<<<<<< HEAD
-=======
+
     // converts the coordinates of view to that of the cell
     func convertCordinate(rect: CGRect, x: CGFloat, y: CGFloat)->(Int, Int)
     {
@@ -38,15 +33,13 @@ class drawView: UIView
         return (Int((x - sidebound)/cellSize), Int((y - upperbound)/cellSize))
     }
     
->>>>>>> d06c1d11b2966ba6a4b4ead8bbebbb6aef79947b
     override func draw(_ rect: CGRect)
     {
         let restriction = rect.width > rect.height ? rect.height : rect.width
         let upperbound = (rect.height - restriction)/2
         let sidebound = (rect.width - restriction)/2
         let cellSize = restriction/gridNumber
-        if col != nil {
-            for cell in col!.cellsAlive
+        for cell in col.cellsAlive
             {
                 let xStart = CGFloat(cell.xCoor) * cellSize
                 let yStart = CGFloat(cell.yCoor) * cellSize
@@ -58,7 +51,6 @@ class drawView: UIView
                 context?.strokePath()
                 context?.fill(rectangle)
             }
-        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
