@@ -14,12 +14,14 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var drawer: drawView!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    
     @IBAction func evolve1GenPressed(_ sender: Any) {
         drawer.col.evolve()
         drawer.setNeedsDisplay()
     }
     
-    
+
+
     func configureView()
         
     {

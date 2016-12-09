@@ -55,6 +55,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBG-zq-yhC">
                                         <rect key="frame" x="0.0" y="0.0" width="580" height="50"/>
                                         <state key="normal" title="Evolve 1 Gen"/>
+                                        <connections>
+                                            <action selector="evolve1GenPressed:" destination="JEX-9P-axG" eventType="touchUpInside" id="yXz-FY-san"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrapping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohn-QT-cvv">
                                         <rect key="frame" x="580" y="0.0" width="74" height="50"/>
