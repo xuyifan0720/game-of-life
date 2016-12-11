@@ -68,21 +68,17 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evolve Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82B-lb-TwG">
-<<<<<<< HEAD
+
                                         <rect key="frame" x="308.5" y="0.0" width="103.5" height="50"/>
-=======
-                                        <rect key="frame" x="312.5" y="0.0" width="103.5" height="50"/>
->>>>>>> 78d63d723e632afbe9c77dc9b678c2f3edc21ac4
+
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="GLu-pf-paK">
-<<<<<<< HEAD
+
                                         <rect key="frame" x="412" y="0.0" width="166" height="51"/>
-=======
-                                        <rect key="frame" x="416" y="0.0" width="162" height="51"/>
->>>>>>> 78d63d723e632afbe9c77dc9b678c2f3edc21ac4
+
                                         <connections>
                                             <action selector="evolveSpeedChanged:" destination="JEX-9P-axG" eventType="valueChanged" id="dR3-Vu-Fi5"/>
                                         </connections>
