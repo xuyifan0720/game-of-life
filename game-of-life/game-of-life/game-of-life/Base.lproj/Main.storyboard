@@ -52,37 +52,33 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aj7-pO-ijJ">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="aj7-pO-ijJ">
                                 <rect key="frame" x="0.0" y="668" width="703" height="50"/>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="T1A-mR-sNA">
-                                <rect key="frame" x="0.0" y="718" width="703" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBG-zq-yhC">
-
-                                        <rect key="frame" x="0.0" y="0.0" width="306.5" height="50"/>
-
-                                        <state key="normal" title="Evolve 1 Gen"/>
-                                        <connections>
-                                            <action selector="evolveOnce:" destination="JEX-9P-axG" eventType="touchUpInside" id="dzp-8Y-RlD"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evolve Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82B-lb-TwG">
-
-                                        <rect key="frame" x="308.5" y="0.0" width="103.5" height="50"/>
-
+                                        <rect key="frame" x="0.0" y="0.0" width="97.5" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="GLu-pf-paK">
-
-                                        <rect key="frame" x="412" y="0.0" width="166" height="51"/>
-
+                                        <rect key="frame" x="97.5" y="0.0" width="607.5" height="51"/>
                                         <connections>
                                             <action selector="evolveSpeedChanged:" destination="JEX-9P-axG" eventType="valueChanged" id="dR3-Vu-Fi5"/>
                                         </connections>
                                     </slider>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="T1A-mR-sNA">
+                                <rect key="frame" x="0.0" y="718" width="703" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBG-zq-yhC">
+                                        <rect key="frame" x="0.0" y="0.0" width="576" height="50"/>
+                                        <state key="normal" title="Evolve 1 Gen"/>
+                                        <connections>
+                                            <action selector="evolveOnce:" destination="JEX-9P-axG" eventType="touchUpInside" id="dzp-8Y-RlD"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrapping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohn-QT-cvv">
                                         <rect key="frame" x="578" y="0.0" width="74" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -171,11 +167,11 @@
                                 <rect key="frame" x="0.0" y="87" width="320" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Arm-wq-HPj">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="69"/>
+                                            <rect key="frame" x="15" y="0.0" width="290" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
