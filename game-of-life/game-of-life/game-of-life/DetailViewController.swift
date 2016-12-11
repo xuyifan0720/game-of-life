@@ -20,6 +20,15 @@ class DetailViewController: UIViewController {
         drawer.setNeedsDisplay()
     }
     
+    @IBAction func toggleWrapping(_ sender: UISwitch) {
+        if sender.isOn {
+            drawer.col.wrappingOn = true
+            drawer.setNeedsDisplay()
+        } else {
+            drawer.col.wrappingOn = false
+            drawer.setNeedsDisplay()
+        }
+    }
 
 
     func configureView()

@@ -67,6 +67,9 @@
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FfP-DI-KWD">
                                         <rect key="frame" x="654" y="0.0" width="51" height="50"/>
+                                        <connections>
+                                            <action selector="toggleWrapping:" destination="JEX-9P-axG" eventType="valueChanged" id="5Jr-yE-628"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                             </stackView>

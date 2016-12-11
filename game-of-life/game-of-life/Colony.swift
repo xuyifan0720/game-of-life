@@ -32,7 +32,7 @@ class Colony: CustomStringConvertible, Equatable{
         self.index = index
         colonyID = Colony.nextColonyID
         Colony.nextColonyID += 1
-        wrappingOn = false
+        wrappingOn = true
     }
     
     func setCellAlive(_ x:Int, y:Int) {
