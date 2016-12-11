@@ -37,11 +37,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7Uw-p0-WTF">
+                                <rect key="frame" x="0.0" y="0.0" width="703" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="RIS-xJ-h5x"/>
+                                </constraints>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQb-A2-fpU">
-                                <rect key="frame" x="0.0" y="0.0" width="703" height="668"/>
+                                <rect key="frame" x="0.0" y="70" width="703" height="598"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="ufe-07-f0a" customClass="drawView" customModule="game_of_life" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="703" height="668"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="703" height="598"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
@@ -61,14 +67,11 @@
                                 <rect key="frame" x="0.0" y="718" width="703" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBG-zq-yhC">
-                                        <rect key="frame" x="0.0" y="0.0" width="462" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="446" height="50"/>
                                         <state key="normal" title="Evolve 1 Gen"/>
-                                        <connections>
-                                            <action selector="evolve1GenPressed:" destination="JEX-9P-axG" eventType="touchUpInside" id="yXz-FY-san"/>
-                                        </connections>
                                     </button>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="GLu-pf-paK">
-                                        <rect key="frame" x="460" y="0.0" width="122" height="51"/>
+                                        <rect key="frame" x="444" y="0.0" width="138" height="51"/>
                                         <connections>
                                             <action selector="evolveSpeedChanged:" destination="JEX-9P-axG" eventType="valueChanged" id="dR3-Vu-Fi5"/>
                                         </connections>
