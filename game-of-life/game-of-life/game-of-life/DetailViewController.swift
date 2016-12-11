@@ -15,6 +15,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet var evolveSlider: UISlider!
     
+    @IBOutlet weak var CoorLabel: UILabel!
+    
     @IBAction func evolveOnce(_ sender: Any) {
             drawer.col.evolve()
             drawer.setNeedsDisplay()
@@ -60,6 +62,7 @@ func configureView()
             {
                 label.text = detail.description
             }
+            CoorLabel.text = "X: \(drawer.coorX) Y: \(drawer.coorY)"
         }
     }
     

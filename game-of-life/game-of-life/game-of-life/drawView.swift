@@ -17,6 +17,8 @@ class drawView: UIView
             setNeedsDisplay()
         }
     }
+    var coorX = 0
+    var coorY = 0
     let gridNumber = CGFloat(60)
     
     // 0 is setting cells dead, 1 is setting cells alive
@@ -57,7 +59,9 @@ class drawView: UIView
     {
         let location = touches.first!.location(in: self)
         let (x, y) = convertCordinate(rect: frame, x: location.x, y: location.y)
-        if col.cellsAlive.contains(Cell(x: x, y: y))
+        coorX = x
+        coorY = y
+            if col.cellsAlive.contains(Cell(x: x, y: y))
         {
             setMode = 0
             col.setCellDead(x, y: y)
@@ -74,6 +78,8 @@ class drawView: UIView
     {
         let location = touches.first!.location(in: self)
         let (x, y) = convertCordinate(rect: frame, x: location.x, y: location.y)
+        coorX = x
+        coorY = y
         if setMode == 0
         {
             col.setCellDead(x, y: y)
