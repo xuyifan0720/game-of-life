@@ -10,12 +10,13 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    
+    var timers = [Timer]()
     @IBOutlet weak var drawer: drawView!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet var evolveSlider: UISlider!
     
     
-    @IBAction func evolve1GenPressed(_ sender: Any) {
+    @IBAction func evolve1GenPressed() {
         drawer.col.evolve()
         drawer.setNeedsDisplay()
     }
@@ -30,10 +31,25 @@ class DetailViewController: UIViewController {
         }
     }
 
-
-    func configureView()
-        
-    {
+    @IBAction func evolveSpeedChanged(_ sender: UISlider) {
+            for timer in timers
+            {
+                timer.invalidate()
+            }
+            timers = [Timer]()
+            if (sender.value == sender.minimumValue) {
+                let timer1 = Timer.scheduledTimer(timeInterval: TimeInterval(sender.maximumValue - sender.value), target: self,
+                                                 selector: #selector(self.update), userInfo: nil, repeats: false)
+                timers.append(timer1)
+                return
+            }
+            let timer2 = Timer.scheduledTimer(timeInterval: 0, target: self,
+                                             selector: #selector(self.update), userInfo: nil, repeats: true)
+            timers.append(timer2)
+    }
+    
+func configureView()
+            {
         // Update the user interface for the detail item.
         if let detail = self.detailItem
         {
@@ -47,12 +63,18 @@ class DetailViewController: UIViewController {
         }
     }
     
+    func update(){
+            drawer.col.evolve()
+            drawer.setNeedsDisplay()
+    }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
+        let timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
+        timers.append(timer)
     }
     
     override func didReceiveMemoryWarning() {
@@ -65,4 +87,3 @@ class DetailViewController: UIViewController {
     
     
 }
-

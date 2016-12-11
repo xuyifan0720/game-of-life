@@ -61,12 +61,18 @@
                                 <rect key="frame" x="0.0" y="718" width="703" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBG-zq-yhC">
-                                        <rect key="frame" x="0.0" y="0.0" width="580" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="462" height="50"/>
                                         <state key="normal" title="Evolve 1 Gen"/>
                                         <connections>
                                             <action selector="evolve1GenPressed:" destination="JEX-9P-axG" eventType="touchUpInside" id="yXz-FY-san"/>
                                         </connections>
                                     </button>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="GLu-pf-paK">
+                                        <rect key="frame" x="460" y="0.0" width="122" height="51"/>
+                                        <connections>
+                                            <action selector="evolveSpeedChanged:" destination="JEX-9P-axG" eventType="valueChanged" id="dR3-Vu-Fi5"/>
+                                        </connections>
+                                    </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrapping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohn-QT-cvv">
                                         <rect key="frame" x="580" y="0.0" width="74" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -91,6 +97,7 @@
                     <navigationItem key="navigationItem" title="Detail" id="fFO-mp-EVg"/>
                     <connections>
                         <outlet property="drawer" destination="ufe-07-f0a" id="GEc-jF-OBb"/>
+                        <outlet property="evolveSlider" destination="GLu-pf-paK" id="tKH-Ld-3UD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
