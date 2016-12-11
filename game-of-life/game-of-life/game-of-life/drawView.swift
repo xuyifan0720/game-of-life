@@ -12,7 +12,7 @@ import UIKit
 class drawView: UIView
 {
     
-    var col = Colony(){
+    var col = Colony(index: -1){
         didSet{
             setNeedsDisplay()
         }
@@ -22,6 +22,7 @@ class drawView: UIView
     // 0 is setting cells dead, 1 is setting cells alive
     var setMode = 0
     
+
     // converts the coordinates of view to that of the cell
     func convertCordinate(rect: CGRect, x: CGFloat, y: CGFloat)->(Int, Int)
     {
@@ -39,17 +40,17 @@ class drawView: UIView
         let sidebound = (rect.width - restriction)/2
         let cellSize = restriction/gridNumber
         for cell in col.cellsAlive
-        {
-            let xStart = CGFloat(cell.xCoor) * cellSize
-            let yStart = CGFloat(cell.yCoor) * cellSize
-            let rectangle = CGRect(x: sidebound + xStart, y: upperbound + yStart,
-                                   width: cellSize, height: cellSize)
-            let context = UIGraphicsGetCurrentContext()
-            context?.setFillColor(red: CGFloat(0.0), green: CGFloat(0.0), blue: CGFloat(255.0), alpha: CGFloat(100.0))
-            context?.setStrokeColor(red: CGFloat(0.0), green: CGFloat(255.0), blue: CGFloat(0.0), alpha: CGFloat(100.0))
-            context?.strokePath()
-            context?.fill(rectangle)
-        }
+            {
+                let xStart = CGFloat(cell.xCoor) * cellSize
+                let yStart = CGFloat(cell.yCoor) * cellSize
+                let rectangle = CGRect(x: sidebound + xStart, y: upperbound + yStart,
+                                       width: cellSize, height: cellSize)
+                let context = UIGraphicsGetCurrentContext()
+                context?.setFillColor(red: CGFloat(0.0), green: CGFloat(0.0), blue: CGFloat(255.0), alpha: CGFloat(100.0))
+                context?.setStrokeColor(red: CGFloat(0.0), green: CGFloat(255.0), blue: CGFloat(0.0), alpha: CGFloat(100.0))
+                context?.strokePath()
+                context?.fill(rectangle)
+            }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)

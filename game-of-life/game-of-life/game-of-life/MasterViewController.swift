@@ -117,7 +117,7 @@ class MasterViewController: UITableViewController{
 
         let object = data.items[indexPath.row]
 
-        cell.textLabel!.text = "Colony \(indexPath.row)"
+        cell.textLabel!.text = "Colony \(object.colonyID)"
 
         return cell
     }
