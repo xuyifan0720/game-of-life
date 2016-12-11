@@ -44,12 +44,11 @@ class DetailViewController: UIViewController {
             }
             timers = [Timer]()
             if (sender.value == sender.minimumValue) {
-                let timer1 = Timer.scheduledTimer(timeInterval: TimeInterval(sender.maximumValue - sender.value), target: self,
-                                                 selector: #selector(self.update), userInfo: nil, repeats: false)
+                let timer1 = Timer()
                 timers.append(timer1)
                 return
             }
-            let timer2 = Timer.scheduledTimer(timeInterval: 0, target: self,
+            let timer2 = Timer.scheduledTimer(timeInterval: TimeInterval(sender.maximumValue - sender.value), target: self,
                                              selector: #selector(self.update), userInfo: nil, repeats: true)
             timers.append(timer2)
     }
