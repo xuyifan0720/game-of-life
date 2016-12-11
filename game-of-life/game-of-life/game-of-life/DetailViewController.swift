@@ -11,16 +11,32 @@ import UIKit
 class DetailViewController: UIViewController {
     
     
+    @IBOutlet weak var speedSlider: UISlider!
+    @IBOutlet weak var slider: UIStackView!
     @IBOutlet weak var drawer: drawView!
     @IBOutlet weak var descriptionLabel: UILabel!
+    var timers = [Timer]()
     
     
-    @IBAction func evolve1GenPressed(_ sender: Any) {
+    @IBAction func evolve1GenPressed(_ sender: Any)
+    {
         drawer.col.evolve()
         drawer.setNeedsDisplay()
     }
     
 
+    @IBAction func sliderChanged(_ sender: UISlider)
+    {
+        for timer in timers
+        {
+            timer.invalidate()
+        }
+        timers = [Timer]()
+        let timer = Timer.scheduledTimer(timeInterval: TimeInterval(sender.maximumValue - sender.value), target: self,
+                                         selector: #selector(self.update), userInfo: nil, repeats: true)
+        timers.append(timer)
+
+    }
 
     func configureView()
         
@@ -38,12 +54,19 @@ class DetailViewController: UIViewController {
         }
     }
     
+    func update()
+    {
+        drawer.col.evolve()
+        drawer.setNeedsDisplay()
+    }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
+        let timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
+        timers.append(timer)
     }
     
     override func didReceiveMemoryWarning() {
