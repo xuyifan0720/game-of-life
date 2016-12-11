@@ -20,6 +20,9 @@ class drawView: UIView
     var coorX = 0
     var coorY = 0
     let gridNumber = CGFloat(60)
+    var s = ""
+    // write the coordinates on the left
+    let place = "l"
     
     // 0 is setting cells dead, 1 is setting cells alive
     var setMode = 0
@@ -33,6 +36,11 @@ class drawView: UIView
         let sidebound = (rect.width - restriction)/2
         let cellSize = restriction/gridNumber
         return (Int((x - sidebound)/cellSize), Int((y - upperbound)/cellSize))
+    }
+    
+    func checkInBound(x: Int, y : Int)-> Bool
+    {
+        return x > 0 && y > 0 && CGFloat(x) < gridNumber && CGFloat(y) < gridNumber
     }
     
     override func draw(_ rect: CGRect)
@@ -53,6 +61,16 @@ class drawView: UIView
                 context?.strokePath()
                 context?.fill(rectangle)
             }
+        
+        let fieldColor: UIColor = UIColor.darkGray
+        let fieldFont = UIFont(name: "Helvetica Neue", size: 18)
+        
+        let attributes: NSDictionary = [
+            NSForegroundColorAttributeName: fieldColor,
+            NSFontAttributeName: fieldFont!
+        ]
+        
+        s.draw(in: CGRect(x: 0.0, y: 0.0, width: 300.0, height: 48.0), withAttributes: attributes as? [String : Any])
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
@@ -61,15 +79,23 @@ class drawView: UIView
         let (x, y) = convertCordinate(rect: frame, x: location.x, y: location.y)
         coorX = x
         coorY = y
-            if col.cellsAlive.contains(Cell(x: x, y: y))
+        s = "x = \(x), y = \(y)"
+        if col.cellsAlive.contains(Cell(x: x, y: y))
         {
             setMode = 0
-            col.setCellDead(x, y: y)
+            if checkInBound(x: x, y: y)
+            {
+                col.setCellDead(x, y: y)
+            }
         }
         else
         {
             setMode = 1
-            col.setCellAlive(x, y: y)
+            if checkInBound(x: x, y: y)
+            {
+                col.setCellAlive(x, y: y)
+            }
+            
         }
         setNeedsDisplay()
     }
@@ -80,14 +106,26 @@ class drawView: UIView
         let (x, y) = convertCordinate(rect: frame, x: location.x, y: location.y)
         coorX = x
         coorY = y
+        s = "x = \(x), y = \(y)"
         if setMode == 0
         {
-            col.setCellDead(x, y: y)
+            if checkInBound(x: x, y: y)
+            {
+                col.setCellDead(x, y: y)
+            }
         }
         else
         {
-            col.setCellAlive(x, y: y)
+            if checkInBound(x: x, y: y)
+            {
+                col.setCellAlive(x, y: y)
+            }
         }
         setNeedsDisplay()
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        s = ""
     }
 }
