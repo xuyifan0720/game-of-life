@@ -15,11 +15,11 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet var evolveSlider: UISlider!
     
-    
-    @IBAction func evolve1GenPressed() {
-        drawer.col.evolve()
-        drawer.setNeedsDisplay()
+    @IBAction func evolveOnce(_ sender: Any) {
+            drawer.col.evolve()
+            drawer.setNeedsDisplay()
     }
+    
     
     @IBAction func toggleWrapping(_ sender: UISwitch) {
         if sender.isOn {

@@ -63,21 +63,30 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T1A-mR-sNA">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="T1A-mR-sNA">
                                 <rect key="frame" x="0.0" y="718" width="703" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBG-zq-yhC">
-                                        <rect key="frame" x="0.0" y="0.0" width="446" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="322.5" height="50"/>
                                         <state key="normal" title="Evolve 1 Gen"/>
+                                        <connections>
+                                            <action selector="evolveOnce:" destination="JEX-9P-axG" eventType="touchUpInside" id="dzp-8Y-RlD"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evolve Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82B-lb-TwG">
+                                        <rect key="frame" x="324.5" y="0.0" width="103.5" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="GLu-pf-paK">
-                                        <rect key="frame" x="444" y="0.0" width="138" height="51"/>
+                                        <rect key="frame" x="428" y="0.0" width="150" height="51"/>
                                         <connections>
                                             <action selector="evolveSpeedChanged:" destination="JEX-9P-axG" eventType="valueChanged" id="dR3-Vu-Fi5"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrapping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohn-QT-cvv">
-                                        <rect key="frame" x="580" y="0.0" width="74" height="50"/>
+                                        <rect key="frame" x="578" y="0.0" width="74" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
