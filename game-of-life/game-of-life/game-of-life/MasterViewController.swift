@@ -12,7 +12,7 @@ class MasterViewController: UITableViewController{
 
     var detailViewController: DetailViewController? = nil
     var data = ColonyList()
-    let templates = ["basic", "glider gun", "smile", "troll"]
+    let templates = ["blank","basic", "glider gun", "random"]
     
   
     @IBOutlet weak var templatePicked: UITextField!
