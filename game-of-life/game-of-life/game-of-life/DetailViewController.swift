@@ -65,7 +65,6 @@ class DetailViewController: UIViewController {
             {
                 label.text = detail.description
             }
-            CoorLabel.text = "X: \(drawer.coorX) Y: \(drawer.coorY)"
         }
     }
     
