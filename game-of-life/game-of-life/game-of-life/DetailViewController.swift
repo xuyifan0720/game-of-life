@@ -10,13 +10,16 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+
     var timers = [Timer]()
     @IBOutlet weak var drawer: drawView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet var evolveSlider: UISlider!
+
     
     @IBOutlet weak var CoorLabel: UILabel!
     
+
     @IBAction func evolveOnce(_ sender: Any) {
             drawer.col.evolve()
             drawer.setNeedsDisplay()
@@ -32,6 +35,7 @@ class DetailViewController: UIViewController {
             drawer.setNeedsDisplay()
         }
     }
+
 
     @IBAction func evolveSpeedChanged(_ sender: UISlider) {
             for timer in timers
@@ -66,9 +70,11 @@ func configureView()
         }
     }
     
-    func update(){
-            drawer.col.evolve()
-            drawer.setNeedsDisplay()
+
+    func update()
+    {
+        drawer.col.evolve()
+        drawer.setNeedsDisplay()
     }
     
     override func viewDidLoad()
